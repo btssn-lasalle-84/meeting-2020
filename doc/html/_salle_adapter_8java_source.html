@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Meeting:  Fichier source de SalleAdapter.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="customdoxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="icone-meeting.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Meeting
+   &#160;<span id="projectnumber">0.2</span>
+   </div>
+   <div id="projectbrief">BTS SNIR LaSalle Avignon 2020</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_salle_adapter_8java_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">SalleAdapter.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_salle_adapter_8java.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>com.lasalle.meeting;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> android.util.Log;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> android.view.LayoutInflater;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> android.view.View;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">import</span> android.view.ViewGroup;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">import</span> androidx.annotation.NonNull;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">import</span> androidx.recyclerview.widget.RecyclerView;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">import</span> java.util.Vector;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html">   23</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html">SalleAdapter</a> <span class="keyword">extends</span> RecyclerView.Adapter&lt;SalleViewHolder&gt;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div><div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#a774947591a1beedaffd58989783206b1">   28</a></span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String <a class="code" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#a774947591a1beedaffd58989783206b1">TAG</a> = <span class="stringliteral">&quot;SalleAdapter&quot;</span>;           </div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#a3988ff211fbf3052b553d77ba0711a5a">   32</a></span>&#160;    <span class="keyword">private</span> Vector&lt;Salle&gt; <a class="code" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#a3988ff211fbf3052b553d77ba0711a5a">mesSalles</a> = null;                     </div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#aac5caf27dc7448e1f37868066b3c9d00">   38</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#aac5caf27dc7448e1f37868066b3c9d00">SalleAdapter</a>(Vector&lt;Salle&gt; mesSalles)</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        Log.d(TAG, <span class="stringliteral">&quot;SalleAdapter (Vector&lt;Salle&gt;)&quot;</span>);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> (mesSalles != null) {</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            this.mesSalles = <a class="code" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#a3988ff211fbf3052b553d77ba0711a5a">mesSalles</a>;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    @NonNull</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    @Override</div><div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#a35aef67b6f83b63fdc9898f6024b24ac">   54</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder.html">SalleViewHolder</a> <a class="code" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#a35aef67b6f83b63fdc9898f6024b24ac">onCreateViewHolder</a>(@NonNull ViewGroup parent, <span class="keywordtype">int</span> viewType)</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        Log.d(TAG, <span class="stringliteral">&quot;SalleViewHolder onCreateViewHolder()&quot;</span>);</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        LayoutInflater inflater = LayoutInflater.from(parent.getContext());</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        View view = inflater.inflate(R.layout.salle, parent, <span class="keyword">false</span>);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder.html">SalleViewHolder</a>(view);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    @Override</div><div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#ac196b478a0ea01a05455bfe15111406f">   68</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#ac196b478a0ea01a05455bfe15111406f">onBindViewHolder</a>(@NonNull <a class="code" href="classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder.html">SalleViewHolder</a> holder, <span class="keywordtype">int</span> position)</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        Log.d(TAG, <span class="stringliteral">&quot;onBindViewHolder()&quot;</span>);</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="classcom_1_1lasalle_1_1meeting_1_1_salle.html">Salle</a> salle = mesSalles.get(position);</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        holder.afficher(salle);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    @Override</div><div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#a4ee9f3c4b020c3bfd88e072bb21bc5fc">   80</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#a4ee9f3c4b020c3bfd88e072bb21bc5fc">getItemCount</a>() {</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        Log.d(TAG, <span class="stringliteral">&quot;getItemCount()&quot;</span>);</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">if</span> (mesSalles != null)</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">return</span> mesSalles.size();</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> 0;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div><div class="ttc" id="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_html_a3988ff211fbf3052b553d77ba0711a5a"><div class="ttname"><a href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#a3988ff211fbf3052b553d77ba0711a5a">com.lasalle.meeting.SalleAdapter.mesSalles</a></div><div class="ttdeci">Vector&lt; Salle &gt; mesSalles</div><div class="ttdoc">Vecteur contenant mes salles. </div><div class="ttdef"><b>Definition:</b> <a href="_salle_adapter_8java_source.html#l00032">SalleAdapter.java:32</a></div></div>
+<div class="ttc" id="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_html_a35aef67b6f83b63fdc9898f6024b24ac"><div class="ttname"><a href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#a35aef67b6f83b63fdc9898f6024b24ac">com.lasalle.meeting.SalleAdapter.onCreateViewHolder</a></div><div class="ttdeci">SalleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)</div><div class="ttdoc">Méthode appelée à la création de l&amp;#39;activité SalleAdapter. </div><div class="ttdef"><b>Definition:</b> <a href="_salle_adapter_8java_source.html#l00054">SalleAdapter.java:54</a></div></div>
+<div class="ttc" id="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_html_a774947591a1beedaffd58989783206b1"><div class="ttname"><a href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#a774947591a1beedaffd58989783206b1">com.lasalle.meeting.SalleAdapter.TAG</a></div><div class="ttdeci">static final String TAG</div><div class="ttdoc">TAG utilisé pour les logs. </div><div class="ttdef"><b>Definition:</b> <a href="_salle_adapter_8java_source.html#l00028">SalleAdapter.java:28</a></div></div>
+<div class="ttc" id="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_html_aac5caf27dc7448e1f37868066b3c9d00"><div class="ttname"><a href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#aac5caf27dc7448e1f37868066b3c9d00">com.lasalle.meeting.SalleAdapter.SalleAdapter</a></div><div class="ttdeci">SalleAdapter(Vector&lt; Salle &gt; mesSalles)</div><div class="ttdoc">constructeur de SalleAdapter </div><div class="ttdef"><b>Definition:</b> <a href="_salle_adapter_8java_source.html#l00038">SalleAdapter.java:38</a></div></div>
+<div class="ttc" id="classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_html"><div class="ttname"><a href="classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder.html">com.lasalle.meeting.SalleViewHolder</a></div><div class="ttdoc">Déclaration de la classe SalleViewHolder. </div><div class="ttdef"><b>Definition:</b> <a href="_salle_view_holder_8java_source.html#l00025">SalleViewHolder.java:25</a></div></div>
+<div class="ttc" id="classcom_1_1lasalle_1_1meeting_1_1_salle_html"><div class="ttname"><a href="classcom_1_1lasalle_1_1meeting_1_1_salle.html">com.lasalle.meeting.Salle</a></div><div class="ttdoc">Déclaration de la classe Salle. </div><div class="ttdef"><b>Definition:</b> <a href="_salle_8java_source.html#l00017">Salle.java:17</a></div></div>
+<div class="ttc" id="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_html_a4ee9f3c4b020c3bfd88e072bb21bc5fc"><div class="ttname"><a href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#a4ee9f3c4b020c3bfd88e072bb21bc5fc">com.lasalle.meeting.SalleAdapter.getItemCount</a></div><div class="ttdeci">int getItemCount()</div><div class="ttdoc">Méthode appelée à la création de l&amp;#39;activité SalleAdapter. </div><div class="ttdef"><b>Definition:</b> <a href="_salle_adapter_8java_source.html#l00080">SalleAdapter.java:80</a></div></div>
+<div class="ttc" id="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_html_ac196b478a0ea01a05455bfe15111406f"><div class="ttname"><a href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html#ac196b478a0ea01a05455bfe15111406f">com.lasalle.meeting.SalleAdapter.onBindViewHolder</a></div><div class="ttdeci">void onBindViewHolder(@NonNull SalleViewHolder holder, int position)</div><div class="ttdoc">Méthode appelée à la création de l&amp;#39;activité SalleAdapter. </div><div class="ttdef"><b>Definition:</b> <a href="_salle_adapter_8java_source.html#l00068">SalleAdapter.java:68</a></div></div>
+<div class="ttc" id="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_html"><div class="ttname"><a href="classcom_1_1lasalle_1_1meeting_1_1_salle_adapter.html">com.lasalle.meeting.SalleAdapter</a></div><div class="ttdoc">Déclaration de la classe SalleAdapter. </div><div class="ttdef"><b>Definition:</b> <a href="_salle_adapter_8java_source.html#l00023">SalleAdapter.java:23</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+<!--Généré le Mardi 7 Avril 2020 19:48:53 pour Meeting par &#160;<a href="http://www.doxygen.org/index.html">-->
+<img class="footer" src="lasalle-logo.png" alt="La Salle Avignon"/>
+<b>Campus La Salle Avignon</b> - 9 Rue Notre Dame des 7 douleurs - BP 50165 - 84008 Avignon
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Salle"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@android:drawable/btn_star_big_on"
+        app:srcCompat="@drawable/meeting"
+        android:title="Salle" />
+    <item
+        android:id="@+id/Favoris"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@android:drawable/star_on"
+        app:srcCompat="@drawable/star"
+        android:title="Favoris" />
+    <item
+        android:id="@+id/Rechercher"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_input_add"
+        app:srcCompat="@drawable/transparency"
+        android:title="Rechercher"
+        app:showAsAction="ifRoom" />
+</menu>

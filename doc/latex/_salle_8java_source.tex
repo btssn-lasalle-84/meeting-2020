@@ -1,0 +1,195 @@
+\hypertarget{_salle_8java_source}{}\subsection{Salle.\+java}
+\label{_salle_8java_source}\index{Salle.\+java@{Salle.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }com.lasalle.meeting;
+00002 
+00009 \textcolor{keyword}{import} android.util.Log;
+00010 
+00011 \textcolor{keyword}{import} java.io.Serializable;
+00012 
+\Hypertarget{_salle_8java_source_l00017}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{00017} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} \textcolor{keyword}{implements} Serializable
+00018 \{
+\Hypertarget{_salle_8java_source_l00022}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aecf7e402dafb939f8ac2f2873f66af25}{00022}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keyword}{final} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aecf7e402dafb939f8ac2f2873f66af25}{TAG} = \textcolor{stringliteral}{"Salle"};          
+\Hypertarget{_salle_8java_source_l00023}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a1b29ac9518653cc15391c4deed380fbb}{00023}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a1b29ac9518653cc15391c4deed380fbb}{FROID} = -3;                
+\Hypertarget{_salle_8java_source_l00024}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aff34072175ff3c1bc425a8bacc31ff4b}{00024}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aff34072175ff3c1bc425a8bacc31ff4b}{FRAIS} = -2;                
+\Hypertarget{_salle_8java_source_l00025}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a5a7a447ea3cef14da14b9137c0491015}{00025}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a5a7a447ea3cef14da14b9137c0491015}{LEGEREMENTFRAIS} = -1;      
+\Hypertarget{_salle_8java_source_l00026}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aeffa1f0543757746e8376ff8495fcedd}{00026}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aeffa1f0543757746e8376ff8495fcedd}{NEUTRE} = 0;                
+\Hypertarget{_salle_8java_source_l00027}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ab12c81e0c36cf771febef1a160a1998b}{00027}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ab12c81e0c36cf771febef1a160a1998b}{LEGEREMENTTIEDE} = 1;       
+\Hypertarget{_salle_8java_source_l00028}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ab6fdb3566901998a91c1cd17f589f607}{00028}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ab6fdb3566901998a91c1cd17f589f607}{TIEDE} = 2;                 
+\Hypertarget{_salle_8java_source_l00029}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_af9e1ab39b745ab56a29910452fcc9814}{00029}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_af9e1ab39b745ab56a29910452fcc9814}{CHAUD} = 3;                 
+00030 
+\Hypertarget{_salle_8java_source_l00034}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a3641e82a9fa78c5dc8bd9a5b92bae482}{00034}     \textcolor{keyword}{private} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a3641e82a9fa78c5dc8bd9a5b92bae482}{nom} = \textcolor{stringliteral}{""};            
+\Hypertarget{_salle_8java_source_l00035}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a79547b79b4e812619f6cc764dbe7a80b}{00035}     \textcolor{keyword}{private} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a79547b79b4e812619f6cc764dbe7a80b}{description} = \textcolor{stringliteral}{""};    
+\Hypertarget{_salle_8java_source_l00036}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a9e31fc4d4c9125e511db52da3254bcba}{00036}     \textcolor{keyword}{private} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a9e31fc4d4c9125e511db52da3254bcba}{emplacement} = \textcolor{stringliteral}{""};    
+\Hypertarget{_salle_8java_source_l00037}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a2965cb92b06dcdd28a07fa550259b1c1}{00037}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a2965cb92b06dcdd28a07fa550259b1c1}{libre};              
+\Hypertarget{_salle_8java_source_l00038}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a1b761514679fa5f98e71809fea448384}{00038}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a1b761514679fa5f98e71809fea448384}{surface};                
+\Hypertarget{_salle_8java_source_l00039}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ac165425fc78429c38042a0fed650b9ee}{00039}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ac165425fc78429c38042a0fed650b9ee}{confort};                
+\Hypertarget{_salle_8java_source_l00040}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a31600559f77e2eeb1f6aa150b203213e}{00040}     \textcolor{keyword}{private} \textcolor{keywordtype}{float} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a31600559f77e2eeb1f6aa150b203213e}{temperature};          
+\Hypertarget{_salle_8java_source_l00041}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ad83f4f49123c8d02f2fc0da484d3e812}{00041}     \textcolor{keyword}{private} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ad83f4f49123c8d02f2fc0da484d3e812}{adresseIP};           
+00042 
+\Hypertarget{_salle_8java_source_l00054}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aa97680026b36fa9e23e8c5c164b8326d}{00054}     \textcolor{keyword}{public} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aa97680026b36fa9e23e8c5c164b8326d}{Salle}(String nom, String description, String emplacement, \textcolor{keywordtype}{int} libre, \textcolor{keywordtype}{int} surface, \textcolor{keywordtype}{int} 
+      confort, \textcolor{keywordtype}{float} temperature, String adresseIP)
+00055     \{
+00056         this.nom = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a3641e82a9fa78c5dc8bd9a5b92bae482}{nom};
+00057         this.description = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a79547b79b4e812619f6cc764dbe7a80b}{description};
+00058         this.emplacement = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a9e31fc4d4c9125e511db52da3254bcba}{emplacement};
+00059         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_af48c38974e65f48082db016a82afaf89}{setLibre}(libre);
+00060         this.surface = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a1b761514679fa5f98e71809fea448384}{surface};
+00061         this.confort = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ac165425fc78429c38042a0fed650b9ee}{confort};
+00062         this.temperature = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a31600559f77e2eeb1f6aa150b203213e}{temperature};
+00063         this.adresseIP = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ad83f4f49123c8d02f2fc0da484d3e812}{adresseIP};
+00064         Log.d(TAG, \textcolor{stringliteral}{"Salle : nom = "} + nom + \textcolor{stringliteral}{" - description = "} + description + \textcolor{stringliteral}{" - emplacement "} + 
+      emplacement + \textcolor{stringliteral}{" - libre = "} + libre + \textcolor{stringliteral}{" - surface = "} + surface + \textcolor{stringliteral}{" - confort = "} + confort + \textcolor{stringliteral}{" - température = "} +
+       temperature + \textcolor{stringliteral}{" - adresseIP = "} + adresseIP);
+00065     \}
+00066 
+\Hypertarget{_salle_8java_source_l00071}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aaa826cdcf54f561daf439c2bf84de5eb}{00071}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aaa826cdcf54f561daf439c2bf84de5eb}{setEmplacement}(String nouvelleEmplacement)
+00072     \{
+00073         emplacement = nouvelleEmplacement;
+00074     \}
+00075 
+\Hypertarget{_salle_8java_source_l00080}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aad311d55fc41f798532a8a30ea1b68f0}{00080}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aad311d55fc41f798532a8a30ea1b68f0}{setNom}(String nouveauNom)
+00081     \{
+00082         nom = nouveauNom;
+00083     \}
+00084 
+\Hypertarget{_salle_8java_source_l00089}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a94c64624d647ec3ec60a9fbeb06948b8}{00089}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a94c64624d647ec3ec60a9fbeb06948b8}{setLibre}(\textcolor{keywordtype}{int} libre)
+00090     \{
+00091         \textcolor{keywordflow}{if} (libre == 0)
+00092         \{
+00093             this.libre = \textcolor{keyword}{false};
+00094         \}
+00095         \textcolor{keywordflow}{else}
+00096         \{
+00097             this.libre = \textcolor{keyword}{true};
+00098         \}
+00099     \}
+00100 
+\Hypertarget{_salle_8java_source_l00104}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_af48c38974e65f48082db016a82afaf89}{00104}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_af48c38974e65f48082db016a82afaf89}{setLibre}()
+00105     \{
+00106         \textcolor{keywordflow}{if} (libre == \textcolor{keyword}{true})
+00107         \{
+00108             this.libre = \textcolor{keyword}{false};
+00109         \}
+00110         \textcolor{keywordflow}{else}
+00111         \{
+00112             this.libre = \textcolor{keyword}{true};
+00113         \}
+00114     \}
+00115 
+\Hypertarget{_salle_8java_source_l00120}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ac95af260fcfd0ad267de052cdc0dbeae}{00120}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ac95af260fcfd0ad267de052cdc0dbeae}{setSurface}(\textcolor{keywordtype}{int} nouvelleSurface)
+00121     \{
+00122         this.surface = nouvelleSurface;
+00123     \}
+00124 
+\Hypertarget{_salle_8java_source_l00129}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a30986392165b34765e4325f669cc5ece}{00129}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a30986392165b34765e4325f669cc5ece}{setConfort}(\textcolor{keywordtype}{int} nouveauConfort)
+00130     \{
+00131         this.confort = nouveauConfort;
+00132     \}
+00133 
+\Hypertarget{_salle_8java_source_l00138}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ae618bd9da7fd68e4789b3d87a4aa90b3}{00138}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ae618bd9da7fd68e4789b3d87a4aa90b3}{setTemperature}(\textcolor{keywordtype}{float} temperature)
+00139     \{
+00140         this.temperature = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a31600559f77e2eeb1f6aa150b203213e}{temperature};
+00141     \}
+00142 
+\Hypertarget{_salle_8java_source_l00147}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a87125e2e3060bc3d1582dafbdef7b65e}{00147}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a87125e2e3060bc3d1582dafbdef7b65e}{setAdresseIP} (String adresseIP)
+00148     \{
+00149         this.adresseIP = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ad83f4f49123c8d02f2fc0da484d3e812}{adresseIP};
+00150     \}
+00151 
+\Hypertarget{_salle_8java_source_l00156}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ac58600d946b6553858cc41be032473cd}{00156}     \textcolor{keyword}{public} \textcolor{keyword}{final} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ac58600d946b6553858cc41be032473cd}{getEmplacement}()
+00157     \{
+00158         \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a9e31fc4d4c9125e511db52da3254bcba}{emplacement};
+00159     \}
+00160 
+\Hypertarget{_salle_8java_source_l00165}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a49d977f69b2783e8ad57eccffc29e97b}{00165}     \textcolor{keyword}{public} \textcolor{keyword}{final} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a49d977f69b2783e8ad57eccffc29e97b}{getNom}()
+00166     \{
+00167         \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a3641e82a9fa78c5dc8bd9a5b92bae482}{nom};
+00168     \}
+00169 
+\Hypertarget{_salle_8java_source_l00174}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adc0c4936355bc0ae22991f69c12a5e42}{00174}     \textcolor{keyword}{public} \textcolor{keyword}{final} \textcolor{keywordtype}{boolean} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adc0c4936355bc0ae22991f69c12a5e42}{getLibre}()
+00175     \{
+00176         \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a2965cb92b06dcdd28a07fa550259b1c1}{libre};
+00177     \}
+00178 
+\Hypertarget{_salle_8java_source_l00183}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a0039fabf5867aef87f5f61f0081bcbcd}{00183}     \textcolor{keyword}{public} \textcolor{keyword}{final} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a0039fabf5867aef87f5f61f0081bcbcd}{getLibreTrame}()
+00184     \{
+00185         \textcolor{keywordflow}{if}(libre == \textcolor{keyword}{false})
+00186         \{
+00187             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"0"};
+00188         \}
+00189         \textcolor{keywordflow}{else}
+00190         \{
+00191             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"1"};
+00192         \}
+00193     \}
+00194 
+\Hypertarget{_salle_8java_source_l00199}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ab86dfb73018e96230ceed49e207a8971}{00199}     \textcolor{keyword}{public} \textcolor{keyword}{final} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ab86dfb73018e96230ceed49e207a8971}{getLibreIHM}()
+00200     \{
+00201         \textcolor{keywordflow}{if}(libre == \textcolor{keyword}{false})
+00202         \{
+00203             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"occupée"};
+00204         \}
+00205         \textcolor{keywordflow}{else}
+00206         \{
+00207             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"disponible"};
+00208         \}
+00209     \}
+00210 
+\Hypertarget{_salle_8java_source_l00215}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ad9dad6b4cfeb020195d4cde268af885f}{00215}     \textcolor{keyword}{public} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ad9dad6b4cfeb020195d4cde268af885f}{getSurface}()
+00216     \{
+00217         \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a1b761514679fa5f98e71809fea448384}{surface};
+00218     \}
+00219 
+\Hypertarget{_salle_8java_source_l00224}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a8f29b7c1302251eed004d0828b7b2ab8}{00224}     \textcolor{keyword}{public} \textcolor{keyword}{final} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a8f29b7c1302251eed004d0828b7b2ab8}{getConfort}()
+00225     \{
+00226         \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ac165425fc78429c38042a0fed650b9ee}{confort};
+00227     \}
+00228 
+\Hypertarget{_salle_8java_source_l00233}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_abf1f96423a1df46ba4d6ac4a1b6d0c34}{00233}     \textcolor{keyword}{public} \textcolor{keyword}{final} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_abf1f96423a1df46ba4d6ac4a1b6d0c34}{getConfortIHM}()
+00234     \{
+00235         String message = \textcolor{stringliteral}{""};
+00236         \textcolor{keywordflow}{switch} (confort)
+00237         \{
+00238             \textcolor{keywordflow}{case} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a1b29ac9518653cc15391c4deed380fbb}{FROID}:
+00239                 message = \textcolor{stringliteral}{"Confort : Froid"};
+00240                 \textcolor{keywordflow}{break};
+00241             \textcolor{keywordflow}{case} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aff34072175ff3c1bc425a8bacc31ff4b}{FRAIS}:
+00242                 message = \textcolor{stringliteral}{"Confort : Frais"};
+00243                 \textcolor{keywordflow}{break};
+00244             \textcolor{keywordflow}{case} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a5a7a447ea3cef14da14b9137c0491015}{LEGEREMENTFRAIS}:
+00245                 message = \textcolor{stringliteral}{"Confort : Légèrement frais"};
+00246                 \textcolor{keywordflow}{break};
+00247             \textcolor{keywordflow}{case} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_aeffa1f0543757746e8376ff8495fcedd}{NEUTRE}:
+00248                 message = \textcolor{stringliteral}{"Confort : Neutre"};
+00249                 \textcolor{keywordflow}{break};
+00250             \textcolor{keywordflow}{case} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ab12c81e0c36cf771febef1a160a1998b}{LEGEREMENTTIEDE}:
+00251                 message = \textcolor{stringliteral}{"Confort : Légèrement tiède"};
+00252                 \textcolor{keywordflow}{break};
+00253             \textcolor{keywordflow}{case} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ab6fdb3566901998a91c1cd17f589f607}{TIEDE}:
+00254                 message = \textcolor{stringliteral}{"Confort : Tiède"};
+00255                 \textcolor{keywordflow}{break};
+00256             \textcolor{keywordflow}{case} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_af9e1ab39b745ab56a29910452fcc9814}{CHAUD}:
+00257                 message = \textcolor{stringliteral}{"Confort : Chaud"};
+00258                 \textcolor{keywordflow}{break};
+00259         \}
+00260         \textcolor{keywordflow}{return} message;
+00261     \}
+00262 
+\Hypertarget{_salle_8java_source_l00267}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ae3235f548f8bc7ab4d05ff38ec762e77}{00267}     \textcolor{keyword}{public} \textcolor{keyword}{final} \textcolor{keywordtype}{float} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ae3235f548f8bc7ab4d05ff38ec762e77}{getTemperature}()
+00268     \{
+00269         \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a31600559f77e2eeb1f6aa150b203213e}{temperature};
+00270     \}
+00271 
+\Hypertarget{_salle_8java_source_l00276}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a253315cc4da23a4b8ab092e10be6d13d}{00276}     \textcolor{keyword}{public} \textcolor{keyword}{final} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a253315cc4da23a4b8ab092e10be6d13d}{getDescription}()
+00277     \{
+00278         \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a79547b79b4e812619f6cc764dbe7a80b}{description};
+00279     \}
+00280 
+\Hypertarget{_salle_8java_source_l00285}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a2189e9d589972421a0f57d045471caa8}{00285}     \textcolor{keyword}{public} \textcolor{keyword}{final} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a2189e9d589972421a0f57d045471caa8}{getAdresseIP}()
+00286     \{
+00287         \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ad83f4f49123c8d02f2fc0da484d3e812}{adresseIP};
+00288     \}
+00289 \}
+\end{DoxyCode}

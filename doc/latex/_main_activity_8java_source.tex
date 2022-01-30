@@ -1,0 +1,444 @@
+\hypertarget{_main_activity_8java_source}{}\subsection{Main\+Activity.\+java}
+\label{_main_activity_8java_source}\index{Main\+Activity.\+java@{Main\+Activity.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }com.lasalle.meeting;
+00002 
+00003 \textcolor{keyword}{import} androidx.annotation.NonNull;
+00004 \textcolor{keyword}{import} androidx.appcompat.app.AppCompatActivity;
+00005 \textcolor{keyword}{import} androidx.recyclerview.widget.LinearLayoutManager;
+00006 \textcolor{keyword}{import} androidx.recyclerview.widget.RecyclerView;
+00007 \textcolor{keyword}{import} androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+00008 
+00009 \textcolor{keyword}{import} android.content.Context;
+00010 \textcolor{keyword}{import} android.content.Intent;
+00011 \textcolor{keyword}{import} android.net.ConnectivityManager;
+00012 \textcolor{keyword}{import} android.net.DhcpInfo;
+00013 \textcolor{keyword}{import} android.net.wifi.WifiInfo;
+00014 \textcolor{keyword}{import} android.net.wifi.WifiManager;
+00015 \textcolor{keyword}{import} android.os.Bundle;
+00016 \textcolor{keyword}{import} android.os.Handler;
+00017 \textcolor{keyword}{import} android.os.Message;
+00018 \textcolor{keyword}{import} android.util.Log;
+00019 \textcolor{keyword}{import} android.view.Menu;
+00020 \textcolor{keyword}{import} android.view.MenuInflater;
+00021 \textcolor{keyword}{import} android.view.MenuItem;
+00022 \textcolor{keyword}{import} android.view.View;
+00023 \textcolor{keyword}{import} android.widget.Button;
+00024 \textcolor{keyword}{import} android.widget.Toast;
+00025 
+00026 \textcolor{keyword}{import} \hyperlink{namespacecom}{com}.google.android.material.bottomnavigation.BottomNavigationView;
+00027 
+00028 \textcolor{keyword}{import} java.io.Serializable;
+00029 \textcolor{keyword}{import} java.net.InetAddress;
+00030 \textcolor{keyword}{import} java.util.ArrayList;
+00031 \textcolor{keyword}{import} java.util.Vector;
+00032 
+\Hypertarget{_main_activity_8java_source_l00043}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity}{00043} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity}{MainActivity} \textcolor{keyword}{extends} AppCompatActivity
+00044 \{
+\Hypertarget{_main_activity_8java_source_l00048}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{00048}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keyword}{final} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG} = \textcolor{stringliteral}{"MainActivity"};   
+\Hypertarget{_main_activity_8java_source_l00049}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a44e95026afeb6899f23283db298f94c9}{00049}     \textcolor{keyword}{private} \textcolor{keyword}{final} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a44e95026afeb6899f23283db298f94c9}{SEPARATEUR} = \textcolor{stringliteral}{";"};              
+00050 
+\Hypertarget{_main_activity_8java_source_l00053}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8feba36a47aa90a06a1df709d24799ec}{00053}     \textcolor{keyword}{private} SwipeRefreshLayout \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8feba36a47aa90a06a1df709d24799ec}{swipeRefreshLayout};      
+\Hypertarget{_main_activity_8java_source_l00054}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a365f2a56de5a65551e62a12708b917f8}{00054}     \textcolor{keyword}{private} RecyclerView \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a365f2a56de5a65551e62a12708b917f8}{recyclerView};                  
+\Hypertarget{_main_activity_8java_source_l00055}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}{00055}     \textcolor{keyword}{private} RecyclerView.Adapter \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}{adapter};               
+\Hypertarget{_main_activity_8java_source_l00056}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aab6810c357c5c87b60466bd82b691f98}{00056}     \textcolor{keyword}{private} RecyclerView.LayoutManager \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aab6810c357c5c87b60466bd82b691f98}{layoutManager};   
+\Hypertarget{_main_activity_8java_source_l00057}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_abc43c4bd4402dd5b7066773a2276244b}{00057}     \textcolor{keyword}{private} BottomNavigationView \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_abc43c4bd4402dd5b7066773a2276244b}{bottomNavigationView};  
+00058 
+\Hypertarget{_main_activity_8java_source_l00061}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{00061}     \textcolor{keyword}{private} \textcolor{keyword}{static} Vector<Salle> \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles};             
+\Hypertarget{_main_activity_8java_source_l00062}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6a358d10ba0f56af3b548e41902db273}{00062}     \textcolor{keyword}{private} \textcolor{keyword}{static} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6a358d10ba0f56af3b548e41902db273}{communication} = null;  
+\Hypertarget{_main_activity_8java_source_l00063}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a5d76e925ebb88ff19eca5a30b5ca4588}{00063}     \textcolor{keyword}{private} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a5d76e925ebb88ff19eca5a30b5ca4588}{salle} = null;                         
+\Hypertarget{_main_activity_8java_source_l00064}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ae7f6d13e941fdf4d6147df3a79e1aa22}{00064}     \textcolor{keyword}{private} WifiManager \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ae7f6d13e941fdf4d6147df3a79e1aa22}{wm} = null;                      
+00065 
+00071     @Override
+\Hypertarget{_main_activity_8java_source_l00072}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3a6d7cbe7839d1876dff75e4497ed02e}{00072}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3a6d7cbe7839d1876dff75e4497ed02e}{onCreate}(Bundle savedInstanceState)
+00073     \{
+00074         Log.d(TAG, \textcolor{stringliteral}{"onCreate()"});
+00075 
+00076         super.onCreate(savedInstanceState);
+00077         setContentView(R.layout.activity\_main);
+00078 
+00079         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a2622b1b85884f9d66038adfc162b2c30}{initialiserRessourcesLayout}();
+00080         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8a28bbbc80b8806750b6297222f0bc92}{connecterWiFi}();
+00081         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a9be385d267f1d26e32c21d119bc65343}{initialiserSalles}();
+00082     \}
+00083 
+00088     @Override
+\Hypertarget{_main_activity_8java_source_l00089}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a09159617fa8f6a5d7b663ba2cf3d65c4}{00089}     \textcolor{keyword}{protected} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a09159617fa8f6a5d7b663ba2cf3d65c4}{onStart}()
+00090     \{
+00091         super.onStart();
+00092         Log.d(TAG, \textcolor{stringliteral}{"onStart()"});
+00093 
+00094         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a58c77ea2af56877f661e85dcfd3f1299}{rafraichir}(mesSalles);
+00095     \}
+00096 
+00101     @Override
+\Hypertarget{_main_activity_8java_source_l00102}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a2ea2affb4c84cb17d1bef20c47421d15}{00102}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a2ea2affb4c84cb17d1bef20c47421d15}{onCreateOptionsMenu}(Menu menu)
+00103     \{
+00104         MenuInflater inflater = getMenuInflater();
+00105         inflater.inflate(R.menu.menu, menu);
+00106         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00107     \}
+00108 
+00113     @Override
+\Hypertarget{_main_activity_8java_source_l00114}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aa75ab3607c240fd26857f7eb6314e8bb}{00114}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aa75ab3607c240fd26857f7eb6314e8bb}{onOptionsItemSelected}(MenuItem item)
+00115     \{
+00116         \textcolor{keyword}{final} Intent intent = \textcolor{keyword}{new} Intent(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity}{MainActivity}.this, 
+      \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_configuration_salle_activity}{ConfigurationSalleActivity}.class);
+00117 
+00118         \textcolor{keywordflow}{switch} (item.getItemId())
+00119         \{
+00120             \textcolor{keywordflow}{case} R.id.configurerSalle:
+00121                 startActivity(intent);
+00122                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00123             \textcolor{keywordflow}{case} R.id.aPropos:
+00124                 Toast.makeText(getApplicationContext(), \textcolor{stringliteral}{"La fonctionnalité à propos de l'application n'est
+       pas encore disponible !"}, Toast.LENGTH\_SHORT).show();
+00125                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00126         \}
+00127         \textcolor{keywordflow}{return} super.onOptionsItemSelected(item);
+00128     \}
+00129 
+\Hypertarget{_main_activity_8java_source_l00134}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a2622b1b85884f9d66038adfc162b2c30}{00134}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a2622b1b85884f9d66038adfc162b2c30}{initialiserRessourcesLayout}()
+00135     \{
+00136         swipeRefreshLayout = (SwipeRefreshLayout)findViewById(R.id.swipeRefreshLayout);
+00137         recyclerView = (RecyclerView)findViewById(R.id.listeSalle);
+00138         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
+00139 
+00140         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6bd5bed490e4679df4c4edbb0ce9a4cc}{setListenBouton}();
+00141     \}
+00142 
+\Hypertarget{_main_activity_8java_source_l00147}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6bd5bed490e4679df4c4edbb0ce9a4cc}{00147}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6bd5bed490e4679df4c4edbb0ce9a4cc}{setListenBouton}()
+00148     \{
+00149         swipeRefreshLayout.setOnRefreshListener(\textcolor{keyword}{new} SwipeRefreshLayout.OnRefreshListener()
+00150         \{
+00151             @Override
+00152             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onRefresh()
+00153             \{
+00154                 \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a58c77ea2af56877f661e85dcfd3f1299}{rafraichir}(mesSalles);
+00155             \}
+00156         \});
+00157 
+00158         bottomNavigationView.setOnNavigationItemSelectedListener(\textcolor{keyword}{new} BottomNavigationView.
+      OnNavigationItemSelectedListener()
+00159         \{
+00160             @Override
+00161             \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} onNavigationItemSelected(@NonNull MenuItem item)
+00162             \{
+00163                 \textcolor{keywordflow}{switch} (item.getItemId())
+00164                 \{
+00165                     \textcolor{keywordflow}{case} R.id.Salle:
+00166                         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a58c77ea2af56877f661e85dcfd3f1299}{rafraichir}(mesSalles);
+00167                         Toast.makeText(getApplicationContext(), \textcolor{stringliteral}{"Rafraichisement"}, Toast.LENGTH\_SHORT).show
+      ();
+00168                         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00169                     \textcolor{keywordflow}{case} R.id.Favoris:
+00170                         Toast.makeText(getApplicationContext(), \textcolor{stringliteral}{"La fonctionnalité favoris n'est pas encore
+       disponible !"}, Toast.LENGTH\_SHORT).show();
+00171                         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00172                     \textcolor{keywordflow}{case} R.id.Rechercher:
+00173                         Toast.makeText(getApplicationContext(), \textcolor{stringliteral}{"La fonctionnalité rechercher n'est pas
+       encore disponible !"}, Toast.LENGTH\_SHORT).show();
+00174                         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00175                 \}
+00176                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00177             \}
+00178         \});
+00179     \}
+00180 
+\Hypertarget{_main_activity_8java_source_l00185}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8a28bbbc80b8806750b6297222f0bc92}{00185}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8a28bbbc80b8806750b6297222f0bc92}{connecterWiFi}()
+00186     \{
+00187         wm = (WifiManager) getApplicationContext().getSystemService(Context.WIFI\_SERVICE);
+00188         \textcolor{keywordflow}{if} (!wm.isWifiEnabled())
+00189         \{
+00190             Log.d(TAG, \textcolor{stringliteral}{"connecterWiFi() WiFi indisponible !"});
+00191             wm.setWifiEnabled(\textcolor{keyword}{true});
+00192         \}
+00193         \textcolor{keywordflow}{else}
+00194         \{
+00195             Log.d(TAG, \textcolor{stringliteral}{"connecterWiFi() WiFi disponible"});
+00196         \}
+00197 
+00198         WifiInfo wi = wm.getConnectionInfo();
+00199         Log.d(TAG, \textcolor{stringliteral}{"connecterWiFi() "} + wi.toString() + \textcolor{stringliteral}{" "} + wi.getIpAddress() + \textcolor{stringliteral}{" "} + wi.getMacAddress())
+      ;
+00200 
+00201         DhcpInfo di = wm.getDhcpInfo();
+00202         Log.d(TAG, \textcolor{stringliteral}{"connecterWiFi() "} + di.toString());
+00203 
+00204         communication = \textcolor{keyword}{new} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a7cf3c4cd95f0f7cb43c077937f80ab8c}{handlerUI});
+00205         Thread tCommunicationUDP = \textcolor{keyword}{new} Thread(communication, \textcolor{stringliteral}{"Communication"});
+00206         tCommunicationUDP.start();
+00207     \}
+00208 
+\Hypertarget{_main_activity_8java_source_l00213}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a9be385d267f1d26e32c21d119bc65343}{00213}     \textcolor{keyword}{private} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a9be385d267f1d26e32c21d119bc65343}{initialiserSalles}()
+00214     \{
+00215         Log.d(TAG, \textcolor{stringliteral}{"initialiserSalles()"});
+00216 
+00217         mesSalles = \textcolor{keyword}{new} Vector<Salle>();
+00218 
+00219         recyclerView.setHasFixedSize(\textcolor{keyword}{true});
+00220         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aab6810c357c5c87b60466bd82b691f98}{layoutManager} = \textcolor{keyword}{new} LinearLayoutManager(\textcolor{keyword}{this});
+00221 
+00222         recyclerView.setLayoutManager(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aab6810c357c5c87b60466bd82b691f98}{layoutManager});
+00223 
+00224         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}{adapter} = \textcolor{keyword}{new} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter}{SalleAdapter}(mesSalles);
+00225         recyclerView.setAdapter(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}{adapter});
+00226 
+00227         \textcolor{comment}{// cf. appel à rafraichir() dans onStart()}
+00228         \textcolor{comment}{/*if(communication != null)}
+00229 \textcolor{comment}{        \{}
+00230 \textcolor{comment}{            communication.envoyer("$GET;1\(\backslash\)r\(\backslash\)n"); // voir protocole}
+00231 \textcolor{comment}{        \}*/}
+00232     \}
+00233 
+\Hypertarget{_main_activity_8java_source_l00239}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8fded0b03a19faea1b0e735af1aa52ca}{00239}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8fded0b03a19faea1b0e735af1aa52ca}{ajouterSalle}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} maSalle)
+00240     \{
+00241         \textcolor{keywordtype}{int} positionMemeSalle = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ad0924169264a808e34a20c406efe0db2}{verifierExistenceSalle}(maSalle);
+00242 
+00243         \textcolor{keywordflow}{if}(positionMemeSalle == -1)
+00244         \{
+00245             mesSalles.add(maSalle);
+00246             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}{adapter}.notifyDataSetChanged();
+00247         \}
+00248         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a1502e68ede2683ced61843887ca63963}{verifierChangementSalle}(maSalle, positionMemeSalle))
+00249         \{
+00250             mesSalles.removeElementAt(positionMemeSalle);
+00251             mesSalles.add(maSalle);
+00252             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}{adapter}.notifyDataSetChanged();
+00253         \}
+00254     \}
+00255 
+\Hypertarget{_main_activity_8java_source_l00261}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ad0924169264a808e34a20c406efe0db2}{00261}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ad0924169264a808e34a20c406efe0db2}{verifierExistenceSalle}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} maSalle)
+00262     \{
+00263         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < mesSalles.size(); ++i)
+00264         \{
+00265             \textcolor{keywordflow}{if}(maSalle.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a2189e9d589972421a0f57d045471caa8}{getAdresseIP}().equals(mesSalles.elementAt(i).getAdresseIP()))
+00266             \{
+00267                 \textcolor{keywordflow}{return} i;
+00268             \}
+00269         \}
+00270         \textcolor{keywordflow}{return} -1;
+00271     \}
+00272 
+00273     \textcolor{comment}{//TODO a regarder}
+\Hypertarget{_main_activity_8java_source_l00274}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac505af5465f0d95b1232acb745c86a08}{00274}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac505af5465f0d95b1232acb745c86a08}{verifierExistenceSalle}(String adresseIP)
+00275     \{
+00276         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < mesSalles.size(); ++i)
+00277         \{
+00278             \textcolor{keywordflow}{if}(mesSalles.elementAt(i).getAdresseIP().equals(adresseIP))
+00279             \{
+00280                 \textcolor{keywordflow}{return} i;
+00281             \}
+00282         \}
+00283         \textcolor{keywordflow}{return} -1;
+00284     \}
+00285 
+\Hypertarget{_main_activity_8java_source_l00291}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a1502e68ede2683ced61843887ca63963}{00291}     \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a1502e68ede2683ced61843887ca63963}{verifierChangementSalle}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} maSalle, \textcolor{keywordtype}{int} positionMemeSalle
+      )
+00292     \{
+00293         \textcolor{keywordflow}{if}(maSalle.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adc0c4936355bc0ae22991f69c12a5e42}{getLibre}() == mesSalles.elementAt(positionMemeSalle).getLibre())
+00294         \{
+00295             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00296         \}
+00297         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(maSalle.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ae3235f548f8bc7ab4d05ff38ec762e77}{getTemperature}() == mesSalles.elementAt(positionMemeSalle).
+      getTemperature())
+00298         \{
+00299             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00300         \}
+00301         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(maSalle.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a8f29b7c1302251eed004d0828b7b2ab8}{getConfort}() == mesSalles.elementAt(positionMemeSalle).getConfort())
+00302         \{
+00303             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00304         \}
+00305         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(maSalle.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a49d977f69b2783e8ad57eccffc29e97b}{getNom}().equals(mesSalles.elementAt(positionMemeSalle).getNom()))
+00306         \{
+00307             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00308         \}
+00309         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(maSalle.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ac58600d946b6553858cc41be032473cd}{getEmplacement}().equals(mesSalles.elementAt(positionMemeSalle).
+      getEmplacement()))
+00310         \{
+00311             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00312         \}
+00313         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(maSalle.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a253315cc4da23a4b8ab092e10be6d13d}{getDescription}().equals(mesSalles.elementAt(positionMemeSalle).
+      getDescription()))
+00314         \{
+00315             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00316         \}
+00317         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(maSalle.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ad9dad6b4cfeb020195d4cde268af885f}{getSurface}() == mesSalles.elementAt(positionMemeSalle).getSurface())
+00318         \{
+00319             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00320         \}
+00321 
+00322         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00323     \}
+00324 
+\Hypertarget{_main_activity_8java_source_l00330}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a58c77ea2af56877f661e85dcfd3f1299}{00330}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a58c77ea2af56877f661e85dcfd3f1299}{rafraichir}(Vector<Salle> mesSalles)
+00331     \{
+00332         Log.d(TAG, \textcolor{stringliteral}{"rafraichir()"});
+00333         \textcolor{keywordflow}{if}(communication != null)
+00334             communication.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a1566200ca56ba63eec13d0ce37e6c7ee}{envoyer}(\textcolor{stringliteral}{"$GET;1\(\backslash\)r\(\backslash\)n"}); \textcolor{comment}{// voir protocole}
+00335 
+00336         swipeRefreshLayout.setRefreshing(\textcolor{keyword}{false});
+00337         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}{adapter}.notifyDataSetChanged();
+00338     \}
+00339 
+\Hypertarget{_main_activity_8java_source_l00345}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a7cf3c4cd95f0f7cb43c077937f80ab8c}{00345}     \textcolor{keyword}{private} Handler \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a7cf3c4cd95f0f7cb43c077937f80ab8c}{handlerUI} = \textcolor{keyword}{new} Handler()
+00346     \{
+00347         @Override
+00348         \textcolor{keyword}{public} \textcolor{keywordtype}{void} handleMessage(Message msg)
+00349         \{
+00350             super.handleMessage(msg);
+00351             Bundle b = msg.getData();
+00352 
+00353             \textcolor{keywordflow}{switch}(b.getInt(\textcolor{stringliteral}{"etat"}))
+00354             \{
+00355                 \textcolor{keywordflow}{case} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication}.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a9cd85019614f2434af944c955519dfd1}{CODE\_RECEPTION}:
+00356                     String trame = b.getString(\textcolor{stringliteral}{"trame"});
+00357                     \textcolor{keywordflow}{if}(!trame.startsWith(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication}.
+      \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a6560c39bb7ebc968e007e4dd98ec296c}{DELIMITEUR\_EN\_TETE}))
+00358                         \textcolor{keywordflow}{return};
+00359                     \textcolor{keywordflow}{if}(!trame.endsWith(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication}.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a6f2e7cb2145496069cdf1b33d017be58}{DELIMITEUR\_FIN}))
+00360                         \textcolor{keywordflow}{return};
+00361                     Log.d(TAG,\textcolor{stringliteral}{"handleMessage() trame reçue de "} + b.getString(\textcolor{stringliteral}{"adresseIP"}) + \textcolor{stringliteral}{":"} + b.getInt
+      (\textcolor{stringliteral}{"port"}));
+00362                     Log.d(TAG,\textcolor{stringliteral}{"handleMessage() trame = "} + trame.replace(\textcolor{stringliteral}{"\(\backslash\)r\(\backslash\)n"}, \textcolor{stringliteral}{""}));
+00366                     String nouvelleTrame = trame.replace(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication}.
+      \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a6560c39bb7ebc968e007e4dd98ec296c}{DELIMITEUR\_EN\_TETE}, \textcolor{stringliteral}{""});
+00367                     nouvelleTrame = nouvelleTrame.replace(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication}.
+      \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a6f2e7cb2145496069cdf1b33d017be58}{DELIMITEUR\_FIN}, \textcolor{stringliteral}{""});
+00368                     \textcolor{keywordtype}{int} nbDelimiteurs = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a0c5fe341f52a9db09401885878883663}{getNbDelimiteurs}(trame);
+00369                     String[] tramesDecompose = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab9a644c245dafa25dc2ef9d099565425}{decomposerTrame}(nouvelleTrame);
+00370                     \textcolor{keywordflow}{if}(nbDelimiteurs == \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication}.
+      \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a28886dc20c115ada2e1e3ee745805643}{NB\_DELIMITEURS\_GET\_1})
+00371                     \{
+00372                         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} salle = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a882bcd3e88633b5190d60625bb70dd43}{creerSalle}(tramesDecompose, b.getString(\textcolor{stringliteral}{"adresseIP"}));
+00373                         \textcolor{keywordflow}{if} (salle != null)
+00374                         \{
+00375                             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8fded0b03a19faea1b0e735af1aa52ca}{ajouterSalle}(salle);
+00376                         \}
+00377                     \}
+00378                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(nbDelimiteurs == \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication}.
+      \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a872d0590c8f9a71ed87484474a0c1070}{NB\_DELIMITEURS\_GET\_2})
+00379                     \{
+00380 
+00381                     \}
+00382                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(nbDelimiteurs == \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication}.
+      \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_aa5881937f7ed66ade03b1eb16386ca9b}{NB\_DELIMITEURS\_GET\_3})
+00383                     \{
+00384 
+00385                     \}
+00386                     \textcolor{keywordflow}{break};
+00387                 \textcolor{keywordflow}{default}:
+00388                     Log.d(TAG,\textcolor{stringliteral}{"handleMessage() code état inconnu ! "});
+00389             \}
+00390         \}
+00391     \};
+00392 
+\Hypertarget{_main_activity_8java_source_l00398}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a882bcd3e88633b5190d60625bb70dd43}{00398}     \textcolor{keyword}{public} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a882bcd3e88633b5190d60625bb70dd43}{creerSalle}(String[] trameDecompose, String adresseIP)
+00399     \{
+00400         Log.d(TAG, \textcolor{stringliteral}{"creerSalle() adresseIP = "} + adresseIP);
+00401         \textcolor{keywordflow}{if}(!trameDecompose[0].isEmpty())
+00402         \{
+00403             Log.d(TAG, \textcolor{stringliteral}{"creerSalle() trameDecompose[0] : "} + trameDecompose[0] + \textcolor{stringliteral}{" (nomSalle)"});
+00404             Log.d(TAG, \textcolor{stringliteral}{"creerSalle() trameDecompose[1] : "} + trameDecompose[1] + \textcolor{stringliteral}{" (description)"});
+00405             Log.d(TAG, \textcolor{stringliteral}{"creerSalle() trameDecompose[2] : "} + trameDecompose[2] + \textcolor{stringliteral}{" (emplacement)"});
+00406             Log.d(TAG, \textcolor{stringliteral}{"creerSalle() trameDecompose[3] : "} + trameDecompose[3] + \textcolor{stringliteral}{" (surface)"});
+00407             Log.d(TAG, \textcolor{stringliteral}{"creerSalle() trameDecompose[4] : "} + trameDecompose[4] + \textcolor{stringliteral}{" (disponibilité)"});
+00408             Log.d(TAG, \textcolor{stringliteral}{"creerSalle() trameDecompose[5] : "} + trameDecompose[5] + \textcolor{stringliteral}{" (niveauDeConfort)"});
+00409             Log.d(TAG, \textcolor{stringliteral}{"creerSalle() trameDecompose[6] : "} + trameDecompose[6] + \textcolor{stringliteral}{" (température)"});
+00410             \textcolor{keywordtype}{int} surface = 0;
+00411             \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3841414e5b270c189de0d58bbd2aca57}{estEntier}(trameDecompose[3]))
+00412                 surface = Integer.parseInt(trameDecompose[3]);
+00413             \textcolor{keywordtype}{int} disponible = 0;
+00414             \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3841414e5b270c189de0d58bbd2aca57}{estEntier}(trameDecompose[4]))
+00415                 disponible = Integer.parseInt(trameDecompose[4]);
+00416             \textcolor{keywordtype}{int} niveauConfort = 0;
+00417             \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3841414e5b270c189de0d58bbd2aca57}{estEntier}(trameDecompose[5]))
+00418                 niveauConfort = Integer.parseInt(trameDecompose[5]);
+00419             \textcolor{keywordtype}{float} temperature = 0;
+00420             \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8d0cd387540353465b1982157b20631c}{estReel}(trameDecompose[6]))
+00421                 temperature = Float.parseFloat(trameDecompose[6]);
+00422 
+00423             salle = \textcolor{keyword}{new} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle}(trameDecompose[0], trameDecompose[1], trameDecompose[2], disponible, 
+      surface, niveauConfort, temperature, adresseIP);
+00424             \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a5d76e925ebb88ff19eca5a30b5ca4588}{salle};
+00425         \}
+00426         \textcolor{keywordflow}{else}
+00427         \{
+00428             Log.d(TAG, \textcolor{stringliteral}{"creerSalle() pas de nom de salle"});
+00429             String inconnuString = \textcolor{stringliteral}{"???"};
+00430             \textcolor{keywordtype}{int} inconnuInt = 1;
+00431 
+00432             salle = \textcolor{keyword}{new} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle}(inconnuString, inconnuString , inconnuString , Integer.parseInt(
+      trameDecompose[4]), inconnuInt,  Integer.parseInt(trameDecompose[5]), Float.parseFloat(trameDecompose[6]), adresseIP
+      );
+00433             \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a5d76e925ebb88ff19eca5a30b5ca4588}{salle};
+00434         \}
+00435     \}
+00436 
+\Hypertarget{_main_activity_8java_source_l00442}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab9a644c245dafa25dc2ef9d099565425}{00442}     \textcolor{keyword}{public} String[] \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab9a644c245dafa25dc2ef9d099565425}{decomposerTrame}(String trame)
+00443     \{
+00444         String[] tramesDecompose = trame.split(SEPARATEUR);
+00445         \textcolor{keywordflow}{return} tramesDecompose;
+00446     \}
+00447 
+\Hypertarget{_main_activity_8java_source_l00453}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a0c5fe341f52a9db09401885878883663}{00453}     \textcolor{keyword}{private} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a0c5fe341f52a9db09401885878883663}{getNbDelimiteurs}(String trame)
+00454     \{
+00455         \textcolor{keywordtype}{int} nb = 0;
+00456         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < trame.length(); i++)
+00457         \{
+00458             \textcolor{keywordflow}{if} (trame.charAt(i) == \textcolor{charliteral}{';'})
+00459             \{
+00460                 nb++;
+00461             \}
+00462         \}
+00463         \textcolor{keywordflow}{return} nb;
+00464     \}
+00465 
+\Hypertarget{_main_activity_8java_source_l00470}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a67d3733d9841e19aae3b52299844bb06}{00470}     \textcolor{keyword}{public} \textcolor{keyword}{static} Vector<Salle> \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a67d3733d9841e19aae3b52299844bb06}{getMesSalles}()
+00471     \{
+00472         \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles};
+00473     \}
+00474 
+\Hypertarget{_main_activity_8java_source_l00479}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a625741ceb02451098c8d7e6f95fafa3a}{00479}     \textcolor{keyword}{public} \textcolor{keyword}{static} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a625741ceb02451098c8d7e6f95fafa3a}{getCommunication}()
+00480     \{
+00481         \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6a358d10ba0f56af3b548e41902db273}{communication};
+00482     \}
+00483 
+\Hypertarget{_main_activity_8java_source_l00484}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3841414e5b270c189de0d58bbd2aca57}{00484}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3841414e5b270c189de0d58bbd2aca57}{estEntier}(String donnee)
+00485     \{
+00486         \textcolor{keywordflow}{try}
+00487         \{
+00488             Integer.parseInt(donnee);
+00489         \}
+00490         \textcolor{keywordflow}{catch}(NumberFormatException e)
+00491         \{
+00492             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00493         \}
+00494         \textcolor{keywordflow}{catch}(NullPointerException e)
+00495         \{
+00496             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00497         \}
+00498 
+00499         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00500     \}
+00501 
+\Hypertarget{_main_activity_8java_source_l00502}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8d0cd387540353465b1982157b20631c}{00502}     \textcolor{keyword}{private} \textcolor{keywordtype}{boolean} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8d0cd387540353465b1982157b20631c}{estReel}(String donnee)
+00503     \{
+00504         \textcolor{keywordflow}{try}
+00505         \{
+00506             Float.parseFloat(donnee);
+00507         \}
+00508         \textcolor{keywordflow}{catch}(NumberFormatException e)
+00509         \{
+00510             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00511         \}
+00512         \textcolor{keywordflow}{catch}(NullPointerException e)
+00513         \{
+00514             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00515         \}
+00516 
+00517         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00518     \}
+00519 \}
+\end{DoxyCode}

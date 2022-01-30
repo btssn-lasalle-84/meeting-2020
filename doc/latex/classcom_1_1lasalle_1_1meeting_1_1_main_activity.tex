@@ -1,0 +1,1126 @@
+\hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity}{}\subsection{Référence de la classe com.\+lasalle.\+meeting.\+Main\+Activity}
+\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity}\index{com.\+lasalle.\+meeting.\+Main\+Activity@{com.\+lasalle.\+meeting.\+Main\+Activity}}
+
+
+Déclaration de la classe \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity}{Main\+Activity}.  
+
+
+
+
+Graphe de collaboration de com.\+lasalle.\+meeting.\+Main\+Activity\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classcom_1_1lasalle_1_1meeting_1_1_main_activity__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8fded0b03a19faea1b0e735af1aa52ca}{ajouter\+Salle} (\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} ma\+Salle)
+\begin{DoxyCompactList}\small\item\em ajoute une salle au vecteur (mes\+Salles) \end{DoxyCompactList}\item 
+\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a882bcd3e88633b5190d60625bb70dd43}{creer\+Salle} (String\mbox{[}$\,$\mbox{]} trame\+Decompose, String adresse\+IP)
+\begin{DoxyCompactList}\small\item\em créer une salle a partir de la trame \end{DoxyCompactList}\item 
+String \mbox{[}$\,$\mbox{]} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab9a644c245dafa25dc2ef9d099565425}{decomposer\+Trame} (String trame)
+\begin{DoxyCompactList}\small\item\em découpe la trame \end{DoxyCompactList}\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a2622b1b85884f9d66038adfc162b2c30}{initialiser\+Ressources\+Layout} ()
+\begin{DoxyCompactList}\small\item\em Récupère et initialise les widgets du layout activity\+\_\+main. \end{DoxyCompactList}\item 
+boolean \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a2ea2affb4c84cb17d1bef20c47421d15}{on\+Create\+Options\+Menu} (Menu menu)
+\begin{DoxyCompactList}\small\item\em Méthode appelée au démarrage de l\textquotesingle{}activité \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity}{Main\+Activity}. \end{DoxyCompactList}\item 
+boolean \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aa75ab3607c240fd26857f7eb6314e8bb}{on\+Options\+Item\+Selected} (Menu\+Item item)
+\begin{DoxyCompactList}\small\item\em Méthode appelée quand on appuye sur boutons du menu. \end{DoxyCompactList}\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a58c77ea2af56877f661e85dcfd3f1299}{rafraichir} (Vector$<$ \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} $>$ \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mes\+Salles})
+\begin{DoxyCompactList}\small\item\em rafraichis mon affichage \end{DoxyCompactList}\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6bd5bed490e4679df4c4edbb0ce9a4cc}{set\+Listen\+Bouton} ()
+\begin{DoxyCompactList}\small\item\em applique les listener sur les layouts approprié \end{DoxyCompactList}\item 
+boolean \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a1502e68ede2683ced61843887ca63963}{verifier\+Changement\+Salle} (\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} ma\+Salle, int position\+Meme\+Salle)
+\begin{DoxyCompactList}\small\item\em Vérifie que la salle n\textquotesingle{}est pas different que dans le vecteur, r\textquotesingle{}envoye true si il y a eu une modifiaction, r\textquotesingle{}envoye false si il y en a pas eux. \end{DoxyCompactList}\item 
+int \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ad0924169264a808e34a20c406efe0db2}{verifier\+Existence\+Salle} (\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} ma\+Salle)
+\begin{DoxyCompactList}\small\item\em verifie que la salle n\textquotesingle{}exisite pas déjà dans le vecteur, r\textquotesingle{}envoye -\/1 si il n\textquotesingle{}en existe pas, r\textquotesingle{}envoye la position de la salle dans le vecteur si il existe \end{DoxyCompactList}\item 
+int \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac505af5465f0d95b1232acb745c86a08}{verifier\+Existence\+Salle} (String adresse\+IP)
+\end{DoxyCompactItemize}
+\subsubsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a625741ceb02451098c8d7e6f95fafa3a}{get\+Communication} ()
+\begin{DoxyCompactList}\small\item\em retourne mon attribut communication \end{DoxyCompactList}\item 
+static Vector$<$ \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} $>$ \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a67d3733d9841e19aae3b52299844bb06}{get\+Mes\+Salles} ()
+\begin{DoxyCompactList}\small\item\em retourne le vecteur de salle \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3a6d7cbe7839d1876dff75e4497ed02e}{on\+Create} (Bundle saved\+Instance\+State)
+\begin{DoxyCompactList}\small\item\em Méthode appelée à la création de l\textquotesingle{}activité \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity}{Main\+Activity}. \end{DoxyCompactList}\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a09159617fa8f6a5d7b663ba2cf3d65c4}{on\+Start} ()
+\begin{DoxyCompactList}\small\item\em Méthode appelée au démarrage de l\textquotesingle{}activité \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity}{Main\+Activity}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8a28bbbc80b8806750b6297222f0bc92}{connecter\+Wi\+Fi} ()
+\begin{DoxyCompactList}\small\item\em méthode permettant de se connecter au wi-\/fi \end{DoxyCompactList}\item 
+boolean \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3841414e5b270c189de0d58bbd2aca57}{est\+Entier} (String donnee)
+\item 
+boolean \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8d0cd387540353465b1982157b20631c}{est\+Reel} (String donnee)
+\item 
+int \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a0c5fe341f52a9db09401885878883663}{get\+Nb\+Delimiteurs} (String trame)
+\begin{DoxyCompactList}\small\item\em retourne le nombre de limiteurs dans la trame \end{DoxyCompactList}\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a9be385d267f1d26e32c21d119bc65343}{initialiser\+Salles} ()
+\begin{DoxyCompactList}\small\item\em initialise le vecteur, les afficheurs pour les salles \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Recycler\+View.\+Adapter \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}{adapter}
+\begin{DoxyCompactList}\small\item\em l\textquotesingle{}adaptateur pour la vue des salles \end{DoxyCompactList}\item 
+Bottom\+Navigation\+View \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_abc43c4bd4402dd5b7066773a2276244b}{bottom\+Navigation\+View}
+\begin{DoxyCompactList}\small\item\em layout permettant d\textquotesingle{}avoir un menu de navigation (en haut) \end{DoxyCompactList}\item 
+Handler \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a7cf3c4cd95f0f7cb43c077937f80ab8c}{handler\+UI}
+\begin{DoxyCompactList}\small\item\em permet de récuperer les trames \end{DoxyCompactList}\item 
+Recycler\+View.\+Layout\+Manager \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aab6810c357c5c87b60466bd82b691f98}{layout\+Manager}
+\begin{DoxyCompactList}\small\item\em le gestionnaire de mise en page \end{DoxyCompactList}\item 
+Recycler\+View \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a365f2a56de5a65551e62a12708b917f8}{recycler\+View}
+\begin{DoxyCompactList}\small\item\em la vue des salles \end{DoxyCompactList}\item 
+\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a5d76e925ebb88ff19eca5a30b5ca4588}{salle} = null
+\begin{DoxyCompactList}\small\item\em attribut salle \end{DoxyCompactList}\item 
+final String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a44e95026afeb6899f23283db298f94c9}{S\+E\+P\+A\+R\+A\+T\+E\+UR} = \char`\"{};\char`\"{}
+\begin{DoxyCompactList}\small\item\em séparateur utilisé dans le protocole meeting \end{DoxyCompactList}\item 
+Swipe\+Refresh\+Layout \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8feba36a47aa90a06a1df709d24799ec}{swipe\+Refresh\+Layout}
+\begin{DoxyCompactList}\small\item\em layout permettant de rafraichir \end{DoxyCompactList}\item 
+Wifi\+Manager \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ae7f6d13e941fdf4d6147df3a79e1aa22}{wm} = null
+\begin{DoxyCompactList}\small\item\em attribut permetant de voir la connection au wi-\/fi \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Attributs privés statiques}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6a358d10ba0f56af3b548e41902db273}{communication} = null
+\begin{DoxyCompactList}\small\item\em attribut permetant d\textquotesingle{}envoyer des requêtes \end{DoxyCompactList}\item 
+static Vector$<$ \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} $>$ \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mes\+Salles}
+\begin{DoxyCompactList}\small\item\em Vecteur contenant mes salles (moyen de stockage) \end{DoxyCompactList}\item 
+static final String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{T\+AG} = \char`\"{}Main\+Activity\char`\"{}
+\begin{DoxyCompactList}\small\item\em T\+AG utilisé pour les logs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Déclaration de la classe \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity}{Main\+Activity}. 
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00043}{43} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+\subsubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8fded0b03a19faea1b0e735af1aa52ca}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8fded0b03a19faea1b0e735af1aa52ca}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!ajouter\+Salle@{ajouter\+Salle}}
+\index{ajouter\+Salle@{ajouter\+Salle}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{ajouter\+Salle()}{ajouterSalle()}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Main\+Activity.\+ajouter\+Salle (\begin{DoxyParamCaption}\item[{\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle}}]{ma\+Salle }\end{DoxyParamCaption})}
+
+
+
+ajoute une salle au vecteur (mes\+Salles) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ma\+Salle} & \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00239}{239} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Références \hyperlink{_main_activity_8java_source_l00055}{com.\+lasalle.\+meeting.\+Main\+Activity.\+adapter}, \hyperlink{_main_activity_8java_source_l00291}{com.\+lasalle.\+meeting.\+Main\+Activity.\+verifier\+Changement\+Salle()}, et \hyperlink{_main_activity_8java_source_l00261}{com.\+lasalle.\+meeting.\+Main\+Activity.\+verifier\+Existence\+Salle()}.
+
+
+\begin{DoxyCode}
+00240     \{
+00241         \textcolor{keywordtype}{int} positionMemeSalle = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ad0924169264a808e34a20c406efe0db2}{verifierExistenceSalle}(maSalle);
+00242 
+00243         \textcolor{keywordflow}{if}(positionMemeSalle == -1)
+00244         \{
+00245             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.add(maSalle);
+00246             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}{adapter}.notifyDataSetChanged();
+00247         \}
+00248         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a1502e68ede2683ced61843887ca63963}{verifierChangementSalle}(maSalle, positionMemeSalle))
+00249         \{
+00250             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.removeElementAt(positionMemeSalle);
+00251             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.add(maSalle);
+00252             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}{adapter}.notifyDataSetChanged();
+00253         \}
+00254     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8a28bbbc80b8806750b6297222f0bc92}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8a28bbbc80b8806750b6297222f0bc92}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!connecter\+Wi\+Fi@{connecter\+Wi\+Fi}}
+\index{connecter\+Wi\+Fi@{connecter\+Wi\+Fi}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{connecter\+Wi\+Fi()}{connecterWiFi()}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Main\+Activity.\+connecter\+Wi\+Fi (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+méthode permettant de se connecter au wi-\/fi 
+
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00185}{185} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Références \hyperlink{_main_activity_8java_source_l00345}{com.\+lasalle.\+meeting.\+Main\+Activity.\+handler\+UI}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00072}{com.\+lasalle.\+meeting.\+Main\+Activity.\+on\+Create()}.
+
+
+\begin{DoxyCode}
+00186     \{
+00187         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ae7f6d13e941fdf4d6147df3a79e1aa22}{wm} = (WifiManager) getApplicationContext().getSystemService(Context.WIFI\_SERVICE);
+00188         \textcolor{keywordflow}{if} (!\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ae7f6d13e941fdf4d6147df3a79e1aa22}{wm}.isWifiEnabled())
+00189         \{
+00190             Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"connecterWiFi() WiFi indisponible !"});
+00191             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ae7f6d13e941fdf4d6147df3a79e1aa22}{wm}.setWifiEnabled(\textcolor{keyword}{true});
+00192         \}
+00193         \textcolor{keywordflow}{else}
+00194         \{
+00195             Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"connecterWiFi() WiFi disponible"});
+00196         \}
+00197 
+00198         WifiInfo wi = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ae7f6d13e941fdf4d6147df3a79e1aa22}{wm}.getConnectionInfo();
+00199         Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"connecterWiFi() "} + wi.toString() + \textcolor{stringliteral}{" "} + wi.getIpAddress() + \textcolor{stringliteral}{" "} + wi.getMacAddress
+      ());
+00200 
+00201         DhcpInfo di = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ae7f6d13e941fdf4d6147df3a79e1aa22}{wm}.getDhcpInfo();
+00202         Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"connecterWiFi() "} + di.toString());
+00203 
+00204         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6a358d10ba0f56af3b548e41902db273}{communication} = \textcolor{keyword}{new} Communication(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a7cf3c4cd95f0f7cb43c077937f80ab8c}{handlerUI});
+00205         Thread tCommunicationUDP = \textcolor{keyword}{new} Thread(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6a358d10ba0f56af3b548e41902db273}{communication}, \textcolor{stringliteral}{"Communication"});
+00206         tCommunicationUDP.start();
+00207     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a882bcd3e88633b5190d60625bb70dd43}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a882bcd3e88633b5190d60625bb70dd43}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!creer\+Salle@{creer\+Salle}}
+\index{creer\+Salle@{creer\+Salle}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{creer\+Salle()}{creerSalle()}}
+{\footnotesize\ttfamily \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} com.\+lasalle.\+meeting.\+Main\+Activity.\+creer\+Salle (\begin{DoxyParamCaption}\item[{String \mbox{[}$\,$\mbox{]}}]{trame\+Decompose,  }\item[{String}]{adresse\+IP }\end{DoxyParamCaption})}
+
+
+
+créer une salle a partir de la trame 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em trame\+Decompose} & String\mbox{[}\mbox{]} , adresse\+IP String \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+salle 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00398}{398} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Références \hyperlink{_main_activity_8java_source_l00484}{com.\+lasalle.\+meeting.\+Main\+Activity.\+est\+Entier()}, \hyperlink{_main_activity_8java_source_l00502}{com.\+lasalle.\+meeting.\+Main\+Activity.\+est\+Reel()}, et \hyperlink{_main_activity_8java_source_l00063}{com.\+lasalle.\+meeting.\+Main\+Activity.\+salle}.
+
+
+\begin{DoxyCode}
+00399     \{
+00400         Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"creerSalle() adresseIP = "} + adresseIP);
+00401         \textcolor{keywordflow}{if}(!trameDecompose[0].isEmpty())
+00402         \{
+00403             Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"creerSalle() trameDecompose[0] : "} + trameDecompose[0] + \textcolor{stringliteral}{" (nomSalle)"});
+00404             Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"creerSalle() trameDecompose[1] : "} + trameDecompose[1] + \textcolor{stringliteral}{" (description)"});
+00405             Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"creerSalle() trameDecompose[2] : "} + trameDecompose[2] + \textcolor{stringliteral}{" (emplacement)"});
+00406             Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"creerSalle() trameDecompose[3] : "} + trameDecompose[3] + \textcolor{stringliteral}{" (surface)"});
+00407             Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"creerSalle() trameDecompose[4] : "} + trameDecompose[4] + \textcolor{stringliteral}{" (disponibilité)"});
+00408             Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"creerSalle() trameDecompose[5] : "} + trameDecompose[5] + \textcolor{stringliteral}{" (niveauDeConfort)"});
+00409             Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"creerSalle() trameDecompose[6] : "} + trameDecompose[6] + \textcolor{stringliteral}{" (température)"});
+00410             \textcolor{keywordtype}{int} surface = 0;
+00411             \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3841414e5b270c189de0d58bbd2aca57}{estEntier}(trameDecompose[3]))
+00412                 surface = Integer.parseInt(trameDecompose[3]);
+00413             \textcolor{keywordtype}{int} disponible = 0;
+00414             \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3841414e5b270c189de0d58bbd2aca57}{estEntier}(trameDecompose[4]))
+00415                 disponible = Integer.parseInt(trameDecompose[4]);
+00416             \textcolor{keywordtype}{int} niveauConfort = 0;
+00417             \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3841414e5b270c189de0d58bbd2aca57}{estEntier}(trameDecompose[5]))
+00418                 niveauConfort = Integer.parseInt(trameDecompose[5]);
+00419             \textcolor{keywordtype}{float} temperature = 0;
+00420             \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8d0cd387540353465b1982157b20631c}{estReel}(trameDecompose[6]))
+00421                 temperature = Float.parseFloat(trameDecompose[6]);
+00422 
+00423             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a5d76e925ebb88ff19eca5a30b5ca4588}{salle} = \textcolor{keyword}{new} Salle(trameDecompose[0], trameDecompose[1], trameDecompose[2], disponible, 
+      surface, niveauConfort, temperature, adresseIP);
+00424             \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a5d76e925ebb88ff19eca5a30b5ca4588}{salle};
+00425         \}
+00426         \textcolor{keywordflow}{else}
+00427         \{
+00428             Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"creerSalle() pas de nom de salle"});
+00429             String inconnuString = \textcolor{stringliteral}{"???"};
+00430             \textcolor{keywordtype}{int} inconnuInt = 1;
+00431 
+00432             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a5d76e925ebb88ff19eca5a30b5ca4588}{salle} = \textcolor{keyword}{new} Salle(inconnuString, inconnuString , inconnuString , Integer.parseInt(
+      trameDecompose[4]), inconnuInt,  Integer.parseInt(trameDecompose[5]), Float.parseFloat(trameDecompose[6]), adresseIP
+      );
+00433             \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a5d76e925ebb88ff19eca5a30b5ca4588}{salle};
+00434         \}
+00435     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab9a644c245dafa25dc2ef9d099565425}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab9a644c245dafa25dc2ef9d099565425}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!decomposer\+Trame@{decomposer\+Trame}}
+\index{decomposer\+Trame@{decomposer\+Trame}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{decomposer\+Trame()}{decomposerTrame()}}
+{\footnotesize\ttfamily String \mbox{[}$\,$\mbox{]} com.\+lasalle.\+meeting.\+Main\+Activity.\+decomposer\+Trame (\begin{DoxyParamCaption}\item[{String}]{trame }\end{DoxyParamCaption})}
+
+
+
+découpe la trame 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em trame} & String \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un tableau de string (String\mbox{[}\mbox{]}) 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00442}{442} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+\begin{DoxyCode}
+00443     \{
+00444         String[] tramesDecompose = trame.split(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a44e95026afeb6899f23283db298f94c9}{SEPARATEUR});
+00445         \textcolor{keywordflow}{return} tramesDecompose;
+00446     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3841414e5b270c189de0d58bbd2aca57}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3841414e5b270c189de0d58bbd2aca57}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!est\+Entier@{est\+Entier}}
+\index{est\+Entier@{est\+Entier}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{est\+Entier()}{estEntier()}}
+{\footnotesize\ttfamily boolean com.\+lasalle.\+meeting.\+Main\+Activity.\+est\+Entier (\begin{DoxyParamCaption}\item[{String}]{donnee }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00484}{484} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00398}{com.\+lasalle.\+meeting.\+Main\+Activity.\+creer\+Salle()}.
+
+
+\begin{DoxyCode}
+00485     \{
+00486         \textcolor{keywordflow}{try}
+00487         \{
+00488             Integer.parseInt(donnee);
+00489         \}
+00490         \textcolor{keywordflow}{catch}(NumberFormatException e)
+00491         \{
+00492             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00493         \}
+00494         \textcolor{keywordflow}{catch}(NullPointerException e)
+00495         \{
+00496             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00497         \}
+00498 
+00499         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00500     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8d0cd387540353465b1982157b20631c}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8d0cd387540353465b1982157b20631c}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!est\+Reel@{est\+Reel}}
+\index{est\+Reel@{est\+Reel}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{est\+Reel()}{estReel()}}
+{\footnotesize\ttfamily boolean com.\+lasalle.\+meeting.\+Main\+Activity.\+est\+Reel (\begin{DoxyParamCaption}\item[{String}]{donnee }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00502}{502} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00398}{com.\+lasalle.\+meeting.\+Main\+Activity.\+creer\+Salle()}.
+
+
+\begin{DoxyCode}
+00503     \{
+00504         \textcolor{keywordflow}{try}
+00505         \{
+00506             Float.parseFloat(donnee);
+00507         \}
+00508         \textcolor{keywordflow}{catch}(NumberFormatException e)
+00509         \{
+00510             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00511         \}
+00512         \textcolor{keywordflow}{catch}(NullPointerException e)
+00513         \{
+00514             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00515         \}
+00516 
+00517         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00518     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a625741ceb02451098c8d7e6f95fafa3a}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a625741ceb02451098c8d7e6f95fafa3a}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!get\+Communication@{get\+Communication}}
+\index{get\+Communication@{get\+Communication}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{get\+Communication()}{getCommunication()}}
+{\footnotesize\ttfamily static \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication} com.\+lasalle.\+meeting.\+Main\+Activity.\+get\+Communication (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+retourne mon attribut communication 
+
+\begin{DoxyReturn}{Renvoie}
+communication 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00479}{479} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Références \hyperlink{_main_activity_8java_source_l00062}{com.\+lasalle.\+meeting.\+Main\+Activity.\+communication}.
+
+
+
+Référencé par \hyperlink{_salle_activity_8java_source_l00060}{com.\+lasalle.\+meeting.\+Salle\+Activity.\+on\+Create()}, et \hyperlink{_configuration_salle_activity_8java_source_l00066}{com.\+lasalle.\+meeting.\+Configuration\+Salle\+Activity.\+on\+Create()}.
+
+
+\begin{DoxyCode}
+00480     \{
+00481         \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6a358d10ba0f56af3b548e41902db273}{communication};
+00482     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a67d3733d9841e19aae3b52299844bb06}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a67d3733d9841e19aae3b52299844bb06}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!get\+Mes\+Salles@{get\+Mes\+Salles}}
+\index{get\+Mes\+Salles@{get\+Mes\+Salles}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{get\+Mes\+Salles()}{getMesSalles()}}
+{\footnotesize\ttfamily static Vector$<$\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle}$>$ com.\+lasalle.\+meeting.\+Main\+Activity.\+get\+Mes\+Salles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+retourne le vecteur de salle 
+
+\begin{DoxyReturn}{Renvoie}
+Vector$<$\+Salle$>$ 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00470}{470} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Références \hyperlink{_main_activity_8java_source_l00061}{com.\+lasalle.\+meeting.\+Main\+Activity.\+mes\+Salles}.
+
+
+
+Référencé par \hyperlink{_configuration_salle_activity_8java_source_l00100}{com.\+lasalle.\+meeting.\+Configuration\+Salle\+Activity.\+initialiser\+Spinner()}.
+
+
+\begin{DoxyCode}
+00471     \{
+00472         \textcolor{keywordflow}{return} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles};
+00473     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a0c5fe341f52a9db09401885878883663}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a0c5fe341f52a9db09401885878883663}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!get\+Nb\+Delimiteurs@{get\+Nb\+Delimiteurs}}
+\index{get\+Nb\+Delimiteurs@{get\+Nb\+Delimiteurs}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{get\+Nb\+Delimiteurs()}{getNbDelimiteurs()}}
+{\footnotesize\ttfamily int com.\+lasalle.\+meeting.\+Main\+Activity.\+get\+Nb\+Delimiteurs (\begin{DoxyParamCaption}\item[{String}]{trame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+retourne le nombre de limiteurs dans la trame 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em trame} & String \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00453}{453} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+\begin{DoxyCode}
+00454     \{
+00455         \textcolor{keywordtype}{int} nb = 0;
+00456         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < trame.length(); i++)
+00457         \{
+00458             \textcolor{keywordflow}{if} (trame.charAt(i) == \textcolor{charliteral}{';'})
+00459             \{
+00460                 nb++;
+00461             \}
+00462         \}
+00463         \textcolor{keywordflow}{return} nb;
+00464     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a2622b1b85884f9d66038adfc162b2c30}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a2622b1b85884f9d66038adfc162b2c30}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!initialiser\+Ressources\+Layout@{initialiser\+Ressources\+Layout}}
+\index{initialiser\+Ressources\+Layout@{initialiser\+Ressources\+Layout}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{initialiser\+Ressources\+Layout()}{initialiserRessourcesLayout()}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Main\+Activity.\+initialiser\+Ressources\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Récupère et initialise les widgets du layout activity\+\_\+main. 
+
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00134}{134} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Références \hyperlink{_main_activity_8java_source_l00147}{com.\+lasalle.\+meeting.\+Main\+Activity.\+set\+Listen\+Bouton()}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00072}{com.\+lasalle.\+meeting.\+Main\+Activity.\+on\+Create()}.
+
+
+\begin{DoxyCode}
+00135     \{
+00136         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8feba36a47aa90a06a1df709d24799ec}{swipeRefreshLayout} = (SwipeRefreshLayout)findViewById(R.id.swipeRefreshLayout);
+00137         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a365f2a56de5a65551e62a12708b917f8}{recyclerView} = (RecyclerView)findViewById(R.id.listeSalle);
+00138         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_abc43c4bd4402dd5b7066773a2276244b}{bottomNavigationView} = (BottomNavigationView) findViewById(R.id.
+      bottomNavigationView);
+00139 
+00140         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6bd5bed490e4679df4c4edbb0ce9a4cc}{setListenBouton}();
+00141     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a9be385d267f1d26e32c21d119bc65343}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a9be385d267f1d26e32c21d119bc65343}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!initialiser\+Salles@{initialiser\+Salles}}
+\index{initialiser\+Salles@{initialiser\+Salles}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{initialiser\+Salles()}{initialiserSalles()}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Main\+Activity.\+initialiser\+Salles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+initialise le vecteur, les afficheurs pour les salles 
+
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00213}{213} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Références \hyperlink{_main_activity_8java_source_l00055}{com.\+lasalle.\+meeting.\+Main\+Activity.\+adapter}, et \hyperlink{_main_activity_8java_source_l00056}{com.\+lasalle.\+meeting.\+Main\+Activity.\+layout\+Manager}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00072}{com.\+lasalle.\+meeting.\+Main\+Activity.\+on\+Create()}.
+
+
+\begin{DoxyCode}
+00214     \{
+00215         Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"initialiserSalles()"});
+00216 
+00217         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles} = \textcolor{keyword}{new} Vector<Salle>();
+00218 
+00219         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a365f2a56de5a65551e62a12708b917f8}{recyclerView}.setHasFixedSize(\textcolor{keyword}{true});
+00220         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aab6810c357c5c87b60466bd82b691f98}{layoutManager} = \textcolor{keyword}{new} LinearLayoutManager(\textcolor{keyword}{this});
+00221 
+00222         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a365f2a56de5a65551e62a12708b917f8}{recyclerView}.setLayoutManager(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aab6810c357c5c87b60466bd82b691f98}{layoutManager});
+00223 
+00224         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}{adapter} = \textcolor{keyword}{new} SalleAdapter(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles});
+00225         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a365f2a56de5a65551e62a12708b917f8}{recyclerView}.setAdapter(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}{adapter});
+00226 
+00227         \textcolor{comment}{// cf. appel à rafraichir() dans onStart()}
+00228         \textcolor{comment}{/*if(communication != null)}
+00229 \textcolor{comment}{        \{}
+00230 \textcolor{comment}{            communication.envoyer("$GET;1\(\backslash\)r\(\backslash\)n"); // voir protocole}
+00231 \textcolor{comment}{        \}*/}
+00232     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3a6d7cbe7839d1876dff75e4497ed02e}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a3a6d7cbe7839d1876dff75e4497ed02e}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!on\+Create@{on\+Create}}
+\index{on\+Create@{on\+Create}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{on\+Create()}{onCreate()}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Main\+Activity.\+on\+Create (\begin{DoxyParamCaption}\item[{Bundle}]{saved\+Instance\+State }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Méthode appelée à la création de l\textquotesingle{}activité \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity}{Main\+Activity}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em saved\+Instance\+State} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00072}{72} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Références \hyperlink{_main_activity_8java_source_l00185}{com.\+lasalle.\+meeting.\+Main\+Activity.\+connecter\+Wi\+Fi()}, \hyperlink{_main_activity_8java_source_l00134}{com.\+lasalle.\+meeting.\+Main\+Activity.\+initialiser\+Ressources\+Layout()}, et \hyperlink{_main_activity_8java_source_l00213}{com.\+lasalle.\+meeting.\+Main\+Activity.\+initialiser\+Salles()}.
+
+
+\begin{DoxyCode}
+00073     \{
+00074         Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"onCreate()"});
+00075 
+00076         super.onCreate(savedInstanceState);
+00077         setContentView(R.layout.activity\_main);
+00078 
+00079         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a2622b1b85884f9d66038adfc162b2c30}{initialiserRessourcesLayout}();
+00080         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8a28bbbc80b8806750b6297222f0bc92}{connecterWiFi}();
+00081         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a9be385d267f1d26e32c21d119bc65343}{initialiserSalles}();
+00082     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a2ea2affb4c84cb17d1bef20c47421d15}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a2ea2affb4c84cb17d1bef20c47421d15}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!on\+Create\+Options\+Menu@{on\+Create\+Options\+Menu}}
+\index{on\+Create\+Options\+Menu@{on\+Create\+Options\+Menu}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{on\+Create\+Options\+Menu()}{onCreateOptionsMenu()}}
+{\footnotesize\ttfamily boolean com.\+lasalle.\+meeting.\+Main\+Activity.\+on\+Create\+Options\+Menu (\begin{DoxyParamCaption}\item[{Menu}]{menu }\end{DoxyParamCaption})}
+
+
+
+Méthode appelée au démarrage de l\textquotesingle{}activité \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity}{Main\+Activity}. 
+
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00102}{102} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+\begin{DoxyCode}
+00103     \{
+00104         MenuInflater inflater = getMenuInflater();
+00105         inflater.inflate(R.menu.menu, menu);
+00106         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00107     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aa75ab3607c240fd26857f7eb6314e8bb}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aa75ab3607c240fd26857f7eb6314e8bb}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!on\+Options\+Item\+Selected@{on\+Options\+Item\+Selected}}
+\index{on\+Options\+Item\+Selected@{on\+Options\+Item\+Selected}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{on\+Options\+Item\+Selected()}{onOptionsItemSelected()}}
+{\footnotesize\ttfamily boolean com.\+lasalle.\+meeting.\+Main\+Activity.\+on\+Options\+Item\+Selected (\begin{DoxyParamCaption}\item[{Menu\+Item}]{item }\end{DoxyParamCaption})}
+
+
+
+Méthode appelée quand on appuye sur boutons du menu. 
+
+\begin{DoxyReturn}{Renvoie}
+boolean 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00114}{114} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+\begin{DoxyCode}
+00115     \{
+00116         \textcolor{keyword}{final} Intent intent = \textcolor{keyword}{new} Intent(MainActivity.this, ConfigurationSalleActivity.class);
+00117 
+00118         \textcolor{keywordflow}{switch} (item.getItemId())
+00119         \{
+00120             \textcolor{keywordflow}{case} R.id.configurerSalle:
+00121                 startActivity(intent);
+00122                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00123             \textcolor{keywordflow}{case} R.id.aPropos:
+00124                 Toast.makeText(getApplicationContext(), \textcolor{stringliteral}{"La fonctionnalité à propos de l'application n'est
+       pas encore disponible !"}, Toast.LENGTH\_SHORT).show();
+00125                 \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00126         \}
+00127         \textcolor{keywordflow}{return} super.onOptionsItemSelected(item);
+00128     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a09159617fa8f6a5d7b663ba2cf3d65c4}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a09159617fa8f6a5d7b663ba2cf3d65c4}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!on\+Start@{on\+Start}}
+\index{on\+Start@{on\+Start}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{on\+Start()}{onStart()}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Main\+Activity.\+on\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Méthode appelée au démarrage de l\textquotesingle{}activité \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity}{Main\+Activity}. 
+
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00089}{89} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Références \hyperlink{_main_activity_8java_source_l00330}{com.\+lasalle.\+meeting.\+Main\+Activity.\+rafraichir()}.
+
+
+\begin{DoxyCode}
+00090     \{
+00091         super.onStart();
+00092         Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"onStart()"});
+00093 
+00094         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a58c77ea2af56877f661e85dcfd3f1299}{rafraichir}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles});
+00095     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a58c77ea2af56877f661e85dcfd3f1299}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a58c77ea2af56877f661e85dcfd3f1299}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!rafraichir@{rafraichir}}
+\index{rafraichir@{rafraichir}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{rafraichir()}{rafraichir()}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Main\+Activity.\+rafraichir (\begin{DoxyParamCaption}\item[{Vector$<$ \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} $>$}]{mes\+Salles }\end{DoxyParamCaption})}
+
+
+
+rafraichis mon affichage 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em mes\+Salles} & Vector$<$\+Salle$>$ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00330}{330} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Références \hyperlink{_main_activity_8java_source_l00055}{com.\+lasalle.\+meeting.\+Main\+Activity.\+adapter}, et \hyperlink{_communication_8java_source_l00161}{com.\+lasalle.\+meeting.\+Communication.\+envoyer()}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00089}{com.\+lasalle.\+meeting.\+Main\+Activity.\+on\+Start()}, et \hyperlink{_main_activity_8java_source_l00147}{com.\+lasalle.\+meeting.\+Main\+Activity.\+set\+Listen\+Bouton()}.
+
+
+\begin{DoxyCode}
+00331     \{
+00332         Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}{TAG}, \textcolor{stringliteral}{"rafraichir()"});
+00333         \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6a358d10ba0f56af3b548e41902db273}{communication} != null)
+00334             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6a358d10ba0f56af3b548e41902db273}{communication}.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a1566200ca56ba63eec13d0ce37e6c7ee}{envoyer}(\textcolor{stringliteral}{"$GET;1\(\backslash\)r\(\backslash\)n"}); \textcolor{comment}{// voir protocole}
+00335 
+00336         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8feba36a47aa90a06a1df709d24799ec}{swipeRefreshLayout}.setRefreshing(\textcolor{keyword}{false});
+00337         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}{adapter}.notifyDataSetChanged();
+00338     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6bd5bed490e4679df4c4edbb0ce9a4cc}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6bd5bed490e4679df4c4edbb0ce9a4cc}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!set\+Listen\+Bouton@{set\+Listen\+Bouton}}
+\index{set\+Listen\+Bouton@{set\+Listen\+Bouton}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{set\+Listen\+Bouton()}{setListenBouton()}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Main\+Activity.\+set\+Listen\+Bouton (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+applique les listener sur les layouts approprié 
+
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00147}{147} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Références \hyperlink{_main_activity_8java_source_l00330}{com.\+lasalle.\+meeting.\+Main\+Activity.\+rafraichir()}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00134}{com.\+lasalle.\+meeting.\+Main\+Activity.\+initialiser\+Ressources\+Layout()}.
+
+
+\begin{DoxyCode}
+00148     \{
+00149         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8feba36a47aa90a06a1df709d24799ec}{swipeRefreshLayout}.setOnRefreshListener(\textcolor{keyword}{new} SwipeRefreshLayout.OnRefreshListener(
+      )
+00150         \{
+00151             @Override
+00152             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onRefresh()
+00153             \{
+00154                 \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a58c77ea2af56877f661e85dcfd3f1299}{rafraichir}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles});
+00155             \}
+00156         \});
+00157 
+00158         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_abc43c4bd4402dd5b7066773a2276244b}{bottomNavigationView}.setOnNavigationItemSelectedListener(\textcolor{keyword}{new} 
+      BottomNavigationView.OnNavigationItemSelectedListener()
+00159         \{
+00160             @Override
+00161             \textcolor{keyword}{public} \textcolor{keywordtype}{boolean} onNavigationItemSelected(@NonNull MenuItem item)
+00162             \{
+00163                 \textcolor{keywordflow}{switch} (item.getItemId())
+00164                 \{
+00165                     \textcolor{keywordflow}{case} R.id.Salle:
+00166                         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a58c77ea2af56877f661e85dcfd3f1299}{rafraichir}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles});
+00167                         Toast.makeText(getApplicationContext(), \textcolor{stringliteral}{"Rafraichisement"}, Toast.LENGTH\_SHORT).show
+      ();
+00168                         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00169                     \textcolor{keywordflow}{case} R.id.Favoris:
+00170                         Toast.makeText(getApplicationContext(), \textcolor{stringliteral}{"La fonctionnalité favoris n'est pas encore
+       disponible !"}, Toast.LENGTH\_SHORT).show();
+00171                         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00172                     \textcolor{keywordflow}{case} R.id.Rechercher:
+00173                         Toast.makeText(getApplicationContext(), \textcolor{stringliteral}{"La fonctionnalité rechercher n'est pas
+       encore disponible !"}, Toast.LENGTH\_SHORT).show();
+00174                         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00175                 \}
+00176                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00177             \}
+00178         \});
+00179     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a1502e68ede2683ced61843887ca63963}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a1502e68ede2683ced61843887ca63963}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!verifier\+Changement\+Salle@{verifier\+Changement\+Salle}}
+\index{verifier\+Changement\+Salle@{verifier\+Changement\+Salle}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{verifier\+Changement\+Salle()}{verifierChangementSalle()}}
+{\footnotesize\ttfamily boolean com.\+lasalle.\+meeting.\+Main\+Activity.\+verifier\+Changement\+Salle (\begin{DoxyParamCaption}\item[{\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle}}]{ma\+Salle,  }\item[{int}]{position\+Meme\+Salle }\end{DoxyParamCaption})}
+
+
+
+Vérifie que la salle n\textquotesingle{}est pas different que dans le vecteur, r\textquotesingle{}envoye true si il y a eu une modifiaction, r\textquotesingle{}envoye false si il y en a pas eux. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ma\+Salle} & \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle}, position\+Meme\+Salle int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+boolean 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00291}{291} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Références \hyperlink{_salle_8java_source_l00224}{com.\+lasalle.\+meeting.\+Salle.\+get\+Confort()}, \hyperlink{_salle_8java_source_l00276}{com.\+lasalle.\+meeting.\+Salle.\+get\+Description()}, \hyperlink{_salle_8java_source_l00156}{com.\+lasalle.\+meeting.\+Salle.\+get\+Emplacement()}, \hyperlink{_salle_8java_source_l00174}{com.\+lasalle.\+meeting.\+Salle.\+get\+Libre()}, \hyperlink{_salle_8java_source_l00165}{com.\+lasalle.\+meeting.\+Salle.\+get\+Nom()}, \hyperlink{_salle_8java_source_l00215}{com.\+lasalle.\+meeting.\+Salle.\+get\+Surface()}, et \hyperlink{_salle_8java_source_l00267}{com.\+lasalle.\+meeting.\+Salle.\+get\+Temperature()}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00239}{com.\+lasalle.\+meeting.\+Main\+Activity.\+ajouter\+Salle()}.
+
+
+\begin{DoxyCode}
+00292     \{
+00293         \textcolor{keywordflow}{if}(maSalle.getLibre() == \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.elementAt(positionMemeSalle).getLibre())
+00294         \{
+00295             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00296         \}
+00297         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(maSalle.getTemperature() == \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.elementAt(positionMemeSalle).getTemperature(
+      ))
+00298         \{
+00299             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00300         \}
+00301         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(maSalle.getConfort() == \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.elementAt(positionMemeSalle).getConfort())
+00302         \{
+00303             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00304         \}
+00305         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(maSalle.getNom().equals(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.elementAt(positionMemeSalle).getNom()))
+00306         \{
+00307             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00308         \}
+00309         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(maSalle.getEmplacement().equals(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.elementAt(positionMemeSalle).
+      getEmplacement()))
+00310         \{
+00311             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00312         \}
+00313         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(maSalle.getDescription().equals(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.elementAt(positionMemeSalle).
+      getDescription()))
+00314         \{
+00315             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00316         \}
+00317         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(maSalle.getSurface() == \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.elementAt(positionMemeSalle).getSurface())
+00318         \{
+00319             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+00320         \}
+00321 
+00322         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00323     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ad0924169264a808e34a20c406efe0db2}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ad0924169264a808e34a20c406efe0db2}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!verifier\+Existence\+Salle@{verifier\+Existence\+Salle}}
+\index{verifier\+Existence\+Salle@{verifier\+Existence\+Salle}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{verifier\+Existence\+Salle()}{verifierExistenceSalle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int com.\+lasalle.\+meeting.\+Main\+Activity.\+verifier\+Existence\+Salle (\begin{DoxyParamCaption}\item[{\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle}}]{ma\+Salle }\end{DoxyParamCaption})}
+
+
+
+verifie que la salle n\textquotesingle{}exisite pas déjà dans le vecteur, r\textquotesingle{}envoye -\/1 si il n\textquotesingle{}en existe pas, r\textquotesingle{}envoye la position de la salle dans le vecteur si il existe 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ma\+Salle} & \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00261}{261} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Références \hyperlink{_salle_8java_source_l00285}{com.\+lasalle.\+meeting.\+Salle.\+get\+Adresse\+I\+P()}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00239}{com.\+lasalle.\+meeting.\+Main\+Activity.\+ajouter\+Salle()}.
+
+
+\begin{DoxyCode}
+00262     \{
+00263         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.size(); ++i)
+00264         \{
+00265             \textcolor{keywordflow}{if}(maSalle.getAdresseIP().equals(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.elementAt(i).getAdresseIP()))
+00266             \{
+00267                 \textcolor{keywordflow}{return} i;
+00268             \}
+00269         \}
+00270         \textcolor{keywordflow}{return} -1;
+00271     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac505af5465f0d95b1232acb745c86a08}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac505af5465f0d95b1232acb745c86a08}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!verifier\+Existence\+Salle@{verifier\+Existence\+Salle}}
+\index{verifier\+Existence\+Salle@{verifier\+Existence\+Salle}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{verifier\+Existence\+Salle()}{verifierExistenceSalle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int com.\+lasalle.\+meeting.\+Main\+Activity.\+verifier\+Existence\+Salle (\begin{DoxyParamCaption}\item[{String}]{adresse\+IP }\end{DoxyParamCaption})}
+
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00274}{274} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+\begin{DoxyCode}
+00275     \{
+00276         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.size(); ++i)
+00277         \{
+00278             \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}{mesSalles}.elementAt(i).getAdresseIP().equals(adresseIP))
+00279             \{
+00280                 \textcolor{keywordflow}{return} i;
+00281             \}
+00282         \}
+00283         \textcolor{keywordflow}{return} -1;
+00284     \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des données membres}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ac0af1346d6f4b3b4bd549b324c0523cc}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!adapter@{adapter}}
+\index{adapter@{adapter}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{adapter}{adapter}}
+{\footnotesize\ttfamily Recycler\+View.\+Adapter com.\+lasalle.\+meeting.\+Main\+Activity.\+adapter\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+l\textquotesingle{}adaptateur pour la vue des salles 
+
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00055}{55} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00239}{com.\+lasalle.\+meeting.\+Main\+Activity.\+ajouter\+Salle()}, \hyperlink{_main_activity_8java_source_l00213}{com.\+lasalle.\+meeting.\+Main\+Activity.\+initialiser\+Salles()}, et \hyperlink{_main_activity_8java_source_l00330}{com.\+lasalle.\+meeting.\+Main\+Activity.\+rafraichir()}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_abc43c4bd4402dd5b7066773a2276244b}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_abc43c4bd4402dd5b7066773a2276244b}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!bottom\+Navigation\+View@{bottom\+Navigation\+View}}
+\index{bottom\+Navigation\+View@{bottom\+Navigation\+View}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{bottom\+Navigation\+View}{bottomNavigationView}}
+{\footnotesize\ttfamily Bottom\+Navigation\+View com.\+lasalle.\+meeting.\+Main\+Activity.\+bottom\+Navigation\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+layout permettant d\textquotesingle{}avoir un menu de navigation (en haut) 
+
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00057}{57} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6a358d10ba0f56af3b548e41902db273}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a6a358d10ba0f56af3b548e41902db273}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!communication@{communication}}
+\index{communication@{communication}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{communication}{communication}}
+{\footnotesize\ttfamily \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication} com.\+lasalle.\+meeting.\+Main\+Activity.\+communication = null\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+attribut permetant d\textquotesingle{}envoyer des requêtes 
+
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00062}{62} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00479}{com.\+lasalle.\+meeting.\+Main\+Activity.\+get\+Communication()}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a7cf3c4cd95f0f7cb43c077937f80ab8c}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a7cf3c4cd95f0f7cb43c077937f80ab8c}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!handler\+UI@{handler\+UI}}
+\index{handler\+UI@{handler\+UI}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{handler\+UI}{handlerUI}}
+{\footnotesize\ttfamily Handler com.\+lasalle.\+meeting.\+Main\+Activity.\+handler\+UI\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+permet de récuperer les trames 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Message} & msg \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00345}{345} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00185}{com.\+lasalle.\+meeting.\+Main\+Activity.\+connecter\+Wi\+Fi()}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aab6810c357c5c87b60466bd82b691f98}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_aab6810c357c5c87b60466bd82b691f98}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!layout\+Manager@{layout\+Manager}}
+\index{layout\+Manager@{layout\+Manager}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{layout\+Manager}{layoutManager}}
+{\footnotesize\ttfamily Recycler\+View.\+Layout\+Manager com.\+lasalle.\+meeting.\+Main\+Activity.\+layout\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+le gestionnaire de mise en page 
+
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00056}{56} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00213}{com.\+lasalle.\+meeting.\+Main\+Activity.\+initialiser\+Salles()}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ab13e34516d877abc3ba937505b441979}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!mes\+Salles@{mes\+Salles}}
+\index{mes\+Salles@{mes\+Salles}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{mes\+Salles}{mesSalles}}
+{\footnotesize\ttfamily Vector$<$\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle}$>$ com.\+lasalle.\+meeting.\+Main\+Activity.\+mes\+Salles\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Vecteur contenant mes salles (moyen de stockage) 
+
+Attributs 
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00061}{61} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00470}{com.\+lasalle.\+meeting.\+Main\+Activity.\+get\+Mes\+Salles()}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a365f2a56de5a65551e62a12708b917f8}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a365f2a56de5a65551e62a12708b917f8}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!recycler\+View@{recycler\+View}}
+\index{recycler\+View@{recycler\+View}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{recycler\+View}{recyclerView}}
+{\footnotesize\ttfamily Recycler\+View com.\+lasalle.\+meeting.\+Main\+Activity.\+recycler\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+la vue des salles 
+
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00054}{54} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a5d76e925ebb88ff19eca5a30b5ca4588}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a5d76e925ebb88ff19eca5a30b5ca4588}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!salle@{salle}}
+\index{salle@{salle}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{salle}{salle}}
+{\footnotesize\ttfamily \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} com.\+lasalle.\+meeting.\+Main\+Activity.\+salle = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+attribut salle 
+
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00063}{63} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00398}{com.\+lasalle.\+meeting.\+Main\+Activity.\+creer\+Salle()}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a44e95026afeb6899f23283db298f94c9}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a44e95026afeb6899f23283db298f94c9}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!S\+E\+P\+A\+R\+A\+T\+E\+UR@{S\+E\+P\+A\+R\+A\+T\+E\+UR}}
+\index{S\+E\+P\+A\+R\+A\+T\+E\+UR@{S\+E\+P\+A\+R\+A\+T\+E\+UR}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{S\+E\+P\+A\+R\+A\+T\+E\+UR}{SEPARATEUR}}
+{\footnotesize\ttfamily final String com.\+lasalle.\+meeting.\+Main\+Activity.\+S\+E\+P\+A\+R\+A\+T\+E\+UR = \char`\"{};\char`\"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+séparateur utilisé dans le protocole meeting 
+
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00049}{49} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8feba36a47aa90a06a1df709d24799ec}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8feba36a47aa90a06a1df709d24799ec}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!swipe\+Refresh\+Layout@{swipe\+Refresh\+Layout}}
+\index{swipe\+Refresh\+Layout@{swipe\+Refresh\+Layout}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{swipe\+Refresh\+Layout}{swipeRefreshLayout}}
+{\footnotesize\ttfamily Swipe\+Refresh\+Layout com.\+lasalle.\+meeting.\+Main\+Activity.\+swipe\+Refresh\+Layout\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+layout permettant de rafraichir 
+
+Ressources layout activity\+\_\+main 
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00053}{53} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_a8f934680ad3a7ec4ad0fea748f0b7506}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!T\+AG@{T\+AG}}
+\index{T\+AG@{T\+AG}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{T\+AG}{TAG}}
+{\footnotesize\ttfamily final String com.\+lasalle.\+meeting.\+Main\+Activity.\+T\+AG = \char`\"{}Main\+Activity\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+T\+AG utilisé pour les logs. 
+
+Constantes 
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00048}{48} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ae7f6d13e941fdf4d6147df3a79e1aa22}\label{classcom_1_1lasalle_1_1meeting_1_1_main_activity_ae7f6d13e941fdf4d6147df3a79e1aa22}} 
+\index{com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}!wm@{wm}}
+\index{wm@{wm}!com\+::lasalle\+::meeting\+::\+Main\+Activity@{com\+::lasalle\+::meeting\+::\+Main\+Activity}}
+\paragraph{\texorpdfstring{wm}{wm}}
+{\footnotesize\ttfamily Wifi\+Manager com.\+lasalle.\+meeting.\+Main\+Activity.\+wm = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+attribut permetant de voir la connection au wi-\/fi 
+
+
+
+Définition à la ligne \hyperlink{_main_activity_8java_source_l00064}{64} du fichier \hyperlink{_main_activity_8java_source}{Main\+Activity.\+java}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_main_activity_8java}{Main\+Activity.\+java}\end{DoxyCompactItemize}

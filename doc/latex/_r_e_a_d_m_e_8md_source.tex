@@ -1,0 +1,98 @@
+\hypertarget{_r_e_a_d_m_e_8md_source}{}\subsection{R\+E\+A\+D\+M\+E.\+md}
+
+\begin{DoxyCode}
+00001 \(\backslash\)mainpage Le projet 
+00002 
+00003 \(\backslash\)tableofcontents
+00004 
+00005 Placé à l'extérieur d'une pièce (salle de réunion ou de travail, ...), le système **Meeting**
+       permettra d'accéder en temps réel aux informations de l'espace concerné : il affichera la disponibilité et l'état de
+       confort et permettra de réaliser sa réservation.
+00006 
+00007 \(\backslash\)section section\_tdm Table des matières
+00008 - \(\backslash\)ref page\_README
+00009 - \(\backslash\)ref page\_changelog
+00010 - \(\backslash\)ref page\_about
+00011 - \(\backslash\)ref page\_licence
+00012 
+00013 \(\backslash\)section section\_infos Informations
+00014 
+00015 \(\backslash\)author Vincent Devine <vincentdevine84@gmail.com>
+00016 \(\backslash\)date 2020
+00017 \(\backslash\)version 0.2
+00018 \(\backslash\)see https://svn.riouxsvn.com/meeting/
+00019 
+00020 
+00021 \(\backslash\)page page\_README README
+00022 
+00023 [TOC]
+00024 
+00025 # Projet \{#projet\}
+00026 
+00027 ## Présentation \{#presentation\}
+00028 
+00029 Placé à l'extérieur d'une pièce (salle de réunion ou de travail, ...), le système **Meeting**
+       permettra d'accéder en temps réel aux informations de l'espace concerné : il affichera la disponibilité et l'état de
+       confort et permettra de réaliser sa réservation.
+00030 
+00031 L'objectif est de proposer une solution simple, alliant flexibilité et ergonomie. Le système affiche
+       de la disponibilité d'accès et le niveau de confort d'une salle de travail ou de réunion.
+00032 
+00033 Le portier connecté est composé :
+00034 
+00035 * d'un micro-contrôleur (ESP32, Z-duino,...)
+00036 * d'un écran tactile
+00037 * d'indicateurs lumineux (Leds)
+00038 * d'une liaison Bluetooth vers une sonde permettant d'évaluer un “indice de confort”
+00039 
+00040 La sonde est composée :
+00041 
+00042 * d'un capteur de température
+00043 * d'un capteur d'hygrométrie
+00044 * d'un capteur de qualité d'air
+00045 
+00046 A partir d'une application mobile sous Android et communiquant en UPD via le WiFi, l'utilisateur
+       pourra :
+00047 
+00048 * Lorsqu'une salle a été sélectionnée, visualiser les informations sur la salle (son nom et des
+       informations complémentaires qu'il pourra associer à celle-ci comme sa localisation, sa surface ...), sa
+       disponibilité et les mesures en provenance du module sonde ainsi que son indice de confort.
+00049 
+00050 * configurer les informations d'une salle.
+00051 
+00052 * la possibilité de prendre une salle en indiquant une durée estimée d'occupation de celle-ci. Dans ce
+       cas, le portier lui enverra un code qu'il utilisera pour augmenter la durée d'occupation ou de libérer la
+       salle.
+00053 
+00054 ## Informations \{#informations\}
+00055 
+00056 \(\backslash\)author Vincent Devine <vincentdevine84@gmail.com>
+00057 \(\backslash\)date 2020
+00058 \(\backslash\)version 0.2
+00059 \(\backslash\)see https://svn.riouxsvn.com/meeting/
+00060 
+00061 
+00062 \(\backslash\)page page\_about A propos
+00063 
+00064 \(\backslash\)author Vincent Devine <vincentdevine84@gmail.com>
+00065 \(\backslash\)date 2020
+00066 \(\backslash\)version 0.2
+00067 \(\backslash\)see https://svn.riouxsvn.com/meeting/
+00068 
+00069 
+00070 \(\backslash\)page page\_licence Licence GPL
+00071 
+00072 This program is free software; you can redistribute it and/or modify
+00073 it under the terms of the GNU General Public License as published by
+00074 the Free Software Foundation; either version 2 of the License, or
+00075 (at your option) any later version.
+00076 
+00077 This program is distributed in the hope that it will be useful,
+00078 but WITHOUT ANY WARRANTY; without even the implied warranty of
+00079 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+00080 GNU General Public License for more details.
+00081 
+00082 You should have received a copy of the GNU General Public License
+00083 along with this program; if not, write to the Free Software
+00084 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
+\end{DoxyCode}

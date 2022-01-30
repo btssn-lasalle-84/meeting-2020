@@ -1,0 +1,686 @@
+\hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication}{}\subsection{Référence de la classe com.\+lasalle.\+meeting.\+Communication}
+\label{classcom_1_1lasalle_1_1meeting_1_1_communication}\index{com.\+lasalle.\+meeting.\+Communication@{com.\+lasalle.\+meeting.\+Communication}}
+
+
+Déclaration de la classe \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication}.  
+
+
+
+
+Graphe de collaboration de com.\+lasalle.\+meeting.\+Communication\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classcom_1_1lasalle_1_1meeting_1_1_communication__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_abf23e6b879122267b3fe10233b4010a8}{arreter} ()
+\begin{DoxyCompactList}\small\item\em méthode arrétant la socket, donc la communication avec les portiers \end{DoxyCompactList}\item 
+\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a3d73554b2774d3274ad385b0faa27d14}{Communication} (Handler \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a05fa5f360f28819a9e106e0265a74643}{handler})
+\begin{DoxyCompactList}\small\item\em constructeur de communication \end{DoxyCompactList}\item 
+\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a38c93366f750b357d248572d85577d8f}{Communication} (int port, Handler \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a05fa5f360f28819a9e106e0265a74643}{handler})
+\begin{DoxyCompactList}\small\item\em constructeur de communication \end{DoxyCompactList}\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a1566200ca56ba63eec13d0ce37e6c7ee}{envoyer} (final String requete)
+\begin{DoxyCompactList}\small\item\em méthode envoyant une requête à l\textquotesingle{}adresse de multicast \end{DoxyCompactList}\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a5dc5cc6c702a8d5da58c06afde637853}{envoyer} (final String requete, final String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a46e5fbc8ec97ad651d544e09121a6468}{adresse\+IP})
+\begin{DoxyCompactList}\small\item\em méthode envoyant une requête à l\textquotesingle{}adresse de indiqué en paramètre \end{DoxyCompactList}\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a0344b79faa04dded3468fb8dda6baa81}{recevoir} ()
+\begin{DoxyCompactList}\small\item\em méthode recevant les trames des portiers \end{DoxyCompactList}\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_afe29bde1b4538990bd0a8c9b2d512efa}{run} ()
+\begin{DoxyCompactList}\small\item\em méthode appelée automatiquement quand le socket reçois quelque chose \end{DoxyCompactList}\item 
+void \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a872d98a1793108557acccd0e695892af}{set\+Handler} (Handler \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a05fa5f360f28819a9e106e0265a74643}{handler})
+\begin{DoxyCompactList}\small\item\em change le handler par celui mis en paramètre \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Attributs publics statiques}
+\begin{DoxyCompactItemize}
+\item 
+static final int \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a9cd85019614f2434af944c955519dfd1}{C\+O\+D\+E\+\_\+\+R\+E\+C\+E\+P\+T\+I\+ON} = 1
+\begin{DoxyCompactList}\small\item\em code de reception correcte pour le portiers \end{DoxyCompactList}\item 
+static final String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_aeff38852b1f770d9a13cd5bf02090bb1}{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+C\+H\+A\+MP} = \char`\"{};\char`\"{}
+\item 
+static final String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a6560c39bb7ebc968e007e4dd98ec296c}{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+E\+N\+\_\+\+T\+E\+TE} = \char`\"{}\$\char`\"{}
+\item 
+static final String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a6f2e7cb2145496069cdf1b33d017be58}{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+F\+IN} = \char`\"{}\textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+static final int \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a28886dc20c115ada2e1e3ee745805643}{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+1} = 6
+\item 
+static final int \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a872d0590c8f9a71ed87484474a0c1070}{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+2} = 3
+\item 
+static final int \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_aa5881937f7ed66ade03b1eb16386ca9b}{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+3} = 1
+\item 
+static final int \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a7cbfa2bdd8c4978f96abd43740050fe0}{T\+I\+M\+E\+O\+U\+T\+\_\+\+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+E\+P\+O\+N\+SE} = 30000
+\begin{DoxyCompactList}\small\item\em temps maximum d\textquotesingle{}une réponse d\textquotesingle{}un portier \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+Inet\+Address \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a46e5fbc8ec97ad651d544e09121a6468}{adresse\+IP} = null
+\begin{DoxyCompactList}\small\item\em attribut récuperant l\textquotesingle{}adresse IP du portier \end{DoxyCompactList}\item 
+Handler \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a05fa5f360f28819a9e106e0265a74643}{handler}
+\begin{DoxyCompactList}\small\item\em attribut permetant d\textquotesingle{}envoyer une requête par rapport a une autre activity \end{DoxyCompactList}\item 
+final Reentrant\+Lock \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_af123afba8dcddc259017fb5c3b431dab}{mutex} = new Reentrant\+Lock()
+\item 
+Datagram\+Socket \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket}
+\begin{DoxyCompactList}\small\item\em attribut récuperant les informations de la socket \end{DoxyCompactList}\item 
+String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a1c5c3782ce80717dab95ed5335929333}{trame}
+\begin{DoxyCompactList}\small\item\em attribut récuperant la trame \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Attributs privés statiques}
+\begin{DoxyCompactItemize}
+\item 
+static final String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a6a2d2e62f87bef261a1999eb5acf8abb}{adresse\+Multicast} = \char`\"{}239.\+0.\+0.\+42\char`\"{}
+\begin{DoxyCompactList}\small\item\em adresse de multicast des portiers \end{DoxyCompactList}\item 
+static final int \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_abf48fd6a29d87d67f4941494404f1ea7}{P\+O\+RT} = 5000
+\begin{DoxyCompactList}\small\item\em port d\textquotesingle{}ecoute des portiers \end{DoxyCompactList}\item 
+static final String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a5d58f88df1f20b4d61edbed9a82eccab}{T\+AG} = \char`\"{}Communication\char`\"{}
+\begin{DoxyCompactList}\small\item\em T\+AG utilisé dans les log. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Description détaillée}
+Déclaration de la classe \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication}{Communication}. 
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00023}{23} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+
+
+\subsubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a3d73554b2774d3274ad385b0faa27d14}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a3d73554b2774d3274ad385b0faa27d14}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!Communication@{Communication}}
+\index{Communication@{Communication}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{Communication()}{Communication()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily com.\+lasalle.\+meeting.\+Communication.\+Communication (\begin{DoxyParamCaption}\item[{Handler}]{handler }\end{DoxyParamCaption})}
+
+
+
+constructeur de communication 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em handler} & Handler \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00056}{56} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+
+
+Références \hyperlink{_communication_8java_source_l00039}{com.\+lasalle.\+meeting.\+Communication.\+handler}, et \hyperlink{_communication_8java_source_l00031}{com.\+lasalle.\+meeting.\+Communication.\+T\+I\+M\+E\+O\+U\+T\+\_\+\+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+E\+P\+O\+N\+SE}.
+
+
+\begin{DoxyCode}
+00057     \{
+00058         this.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a05fa5f360f28819a9e106e0265a74643}{handler} = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a05fa5f360f28819a9e106e0265a74643}{handler};
+00059         \textcolor{keywordflow}{try}
+00060         \{
+00061             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket} = \textcolor{keyword}{new} DatagramSocket(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_abf48fd6a29d87d67f4941494404f1ea7}{PORT});
+00062             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket}.setSoTimeout(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a3d73554b2774d3274ad385b0faa27d14}{Communication}.TIMEOUT\_RECEPTION\_REPONSE);
+00063         \}
+00064         \textcolor{keywordflow}{catch} (SocketException se)
+00065         \{
+00066             se.printStackTrace();
+00067         \}
+00068 
+00069         \textcolor{keywordflow}{try}
+00070         \{
+00071             this.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a46e5fbc8ec97ad651d544e09121a6468}{adresseIP} = InetAddress.getByName(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a6a2d2e62f87bef261a1999eb5acf8abb}{adresseMulticast});
+00072         \}
+00073         \textcolor{keywordflow}{catch} (UnknownHostException e)
+00074         \{
+00075             e.printStackTrace();
+00076         \}
+00077     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a38c93366f750b357d248572d85577d8f}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a38c93366f750b357d248572d85577d8f}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!Communication@{Communication}}
+\index{Communication@{Communication}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{Communication()}{Communication()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily com.\+lasalle.\+meeting.\+Communication.\+Communication (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{Handler}]{handler }\end{DoxyParamCaption})}
+
+
+
+constructeur de communication 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em handler} & Handler, port int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00084}{84} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+
+
+Références \hyperlink{_communication_8java_source_l00039}{com.\+lasalle.\+meeting.\+Communication.\+handler}, et \hyperlink{_communication_8java_source_l00031}{com.\+lasalle.\+meeting.\+Communication.\+T\+I\+M\+E\+O\+U\+T\+\_\+\+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+E\+P\+O\+N\+SE}.
+
+
+\begin{DoxyCode}
+00085     \{
+00086         this.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a05fa5f360f28819a9e106e0265a74643}{handler} = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a05fa5f360f28819a9e106e0265a74643}{handler};
+00087         \textcolor{keywordflow}{try}
+00088         \{
+00089             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket} = \textcolor{keyword}{new} DatagramSocket(port);
+00090             \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket}.setSoTimeout(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a3d73554b2774d3274ad385b0faa27d14}{Communication}.TIMEOUT\_RECEPTION\_REPONSE);
+00091         \}
+00092         \textcolor{keywordflow}{catch} (SocketException se)
+00093         \{
+00094             se.printStackTrace();
+00095         \}
+00096 
+00097         \textcolor{keywordflow}{try}
+00098         \{
+00099             this.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a46e5fbc8ec97ad651d544e09121a6468}{adresseIP} = InetAddress.getByName(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a6a2d2e62f87bef261a1999eb5acf8abb}{adresseMulticast});
+00100         \}
+00101         \textcolor{keywordflow}{catch} (UnknownHostException e)
+00102         \{
+00103             e.printStackTrace();
+00104         \}
+00105     \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_abf23e6b879122267b3fe10233b4010a8}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_abf23e6b879122267b3fe10233b4010a8}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!arreter@{arreter}}
+\index{arreter@{arreter}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{arreter()}{arreter()}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Communication.\+arreter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+méthode arrétant la socket, donc la communication avec les portiers 
+
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00235}{235} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+
+\begin{DoxyCode}
+00236     \{
+00237         \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket} == null)
+00238             \textcolor{keywordflow}{return};
+00239         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket}.close();
+00240     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a1566200ca56ba63eec13d0ce37e6c7ee}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a1566200ca56ba63eec13d0ce37e6c7ee}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!envoyer@{envoyer}}
+\index{envoyer@{envoyer}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{envoyer()}{envoyer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Communication.\+envoyer (\begin{DoxyParamCaption}\item[{final String}]{requete }\end{DoxyParamCaption})}
+
+
+
+méthode envoyant une requête à l\textquotesingle{}adresse de multicast 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em requete} & String \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00161}{161} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+
+
+Références \hyperlink{_communication_8java_source_l00247}{com.\+lasalle.\+meeting.\+Communication.\+run()}.
+
+
+
+Référencé par \hyperlink{_main_activity_8java_source_l00330}{com.\+lasalle.\+meeting.\+Main\+Activity.\+rafraichir()}, \hyperlink{_salle_activity_8java_source_l00132}{com.\+lasalle.\+meeting.\+Salle\+Activity.\+set\+Listener()}, et \hyperlink{_configuration_salle_activity_8java_source_l00138}{com.\+lasalle.\+meeting.\+Configuration\+Salle\+Activity.\+set\+Listener()}.
+
+
+\begin{DoxyCode}
+00162     \{
+00163         \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket} == null)
+00164             \textcolor{keywordflow}{return};
+00165 
+00166         \textcolor{keyword}{new} Thread()
+00167         \{
+00168             @Override \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_afe29bde1b4538990bd0a8c9b2d512efa}{run}()
+00169             \{
+00170                 byte[] emission = \textcolor{keyword}{new} byte[1024];
+00171 
+00172                 \textcolor{keywordflow}{try}
+00173                 \{
+00174                     emission = requete.getBytes();
+00175                     DatagramPacket paquetRetour = \textcolor{keyword}{new} DatagramPacket(emission, emission.length, 
+      \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a46e5fbc8ec97ad651d544e09121a6468}{adresseIP}, \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_abf48fd6a29d87d67f4941494404f1ea7}{PORT});
+00176                     \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket}.send(paquetRetour);
+00177                     Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a5d58f88df1f20b4d61edbed9a82eccab}{TAG}, \textcolor{stringliteral}{"send() = "} + requete);
+00178                 \}
+00179                 \textcolor{keywordflow}{catch} (IOException e)
+00180                 \{
+00181                     Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a5d58f88df1f20b4d61edbed9a82eccab}{TAG}, \textcolor{stringliteral}{"Erreur send() [socket.isClosed = "} + \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket}.isClosed() + \textcolor{stringliteral}{"]"});
+00182                     e.printStackTrace();
+00183                 \}
+00184             \}
+00185         \}.start();
+00186     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a5dc5cc6c702a8d5da58c06afde637853}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a5dc5cc6c702a8d5da58c06afde637853}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!envoyer@{envoyer}}
+\index{envoyer@{envoyer}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{envoyer()}{envoyer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Communication.\+envoyer (\begin{DoxyParamCaption}\item[{final String}]{requete,  }\item[{final String}]{adresse\+IP }\end{DoxyParamCaption})}
+
+
+
+méthode envoyant une requête à l\textquotesingle{}adresse de indiqué en paramètre 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em requete} & String, adresse\+IP String \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00193}{193} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+
+
+Références \hyperlink{_communication_8java_source_l00247}{com.\+lasalle.\+meeting.\+Communication.\+run()}.
+
+
+\begin{DoxyCode}
+00194     \{
+00195         \textcolor{keywordflow}{if}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket} == null)
+00196             \textcolor{keywordflow}{return};
+00197 
+00198         \textcolor{keyword}{final} InetAddress adresseIPDistante;
+00199         \textcolor{keywordflow}{try}
+00200         \{
+00201             adresseIPDistante = InetAddress.getByName(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a46e5fbc8ec97ad651d544e09121a6468}{adresseIP});
+00202         \}
+00203         \textcolor{keywordflow}{catch} (UnknownHostException e)
+00204         \{
+00205             e.printStackTrace();
+00206             \textcolor{keywordflow}{return};
+00207         \}
+00208 
+00209         \textcolor{keyword}{new} Thread()
+00210         \{
+00211             @Override \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_afe29bde1b4538990bd0a8c9b2d512efa}{run}()
+00212             \{
+00213                 byte[] emission = \textcolor{keyword}{new} byte[1024];
+00214 
+00215                 \textcolor{keywordflow}{try}
+00216                 \{
+00217                     emission = requete.getBytes();
+00218                     DatagramPacket paquetRetour = \textcolor{keyword}{new} DatagramPacket(emission, emission.length, 
+      adresseIPDistante, \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_abf48fd6a29d87d67f4941494404f1ea7}{PORT});
+00219                     \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket}.send(paquetRetour);
+00220                     Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a5d58f88df1f20b4d61edbed9a82eccab}{TAG}, \textcolor{stringliteral}{"send() "} + \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a46e5fbc8ec97ad651d544e09121a6468}{adresseIP} + \textcolor{stringliteral}{" = "} + requete);
+00221                 \}
+00222                 \textcolor{keywordflow}{catch} (IOException e)
+00223                 \{
+00224                     Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a5d58f88df1f20b4d61edbed9a82eccab}{TAG}, \textcolor{stringliteral}{"Erreur send() [socket.isClosed = "} + \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket}.isClosed() + \textcolor{stringliteral}{"]"});
+00225                     e.printStackTrace();
+00226                 \}
+00227             \}
+00228         \}.start();
+00229     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a0344b79faa04dded3468fb8dda6baa81}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a0344b79faa04dded3468fb8dda6baa81}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!recevoir@{recevoir}}
+\index{recevoir@{recevoir}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{recevoir()}{recevoir()}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Communication.\+recevoir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+méthode recevant les trames des portiers 
+
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00123}{123} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+
+
+Références \hyperlink{_communication_8java_source_l00032}{com.\+lasalle.\+meeting.\+Communication.\+C\+O\+D\+E\+\_\+\+R\+E\+C\+E\+P\+T\+I\+ON}, et \hyperlink{_communication_8java_source_l00040}{com.\+lasalle.\+meeting.\+Communication.\+trame}.
+
+
+
+Référencé par \hyperlink{_communication_8java_source_l00247}{com.\+lasalle.\+meeting.\+Communication.\+run()}.
+
+
+\begin{DoxyCode}
+00124     \{
+00125         byte[] reception = \textcolor{keyword}{new} byte[1024];
+00126 
+00127         \textcolor{keywordflow}{while} (\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket} != null && !\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket}.isClosed())
+00128         \{
+00129             \textcolor{keywordflow}{try}
+00130             \{
+00131                 \textcolor{keyword}{final} DatagramPacket paquetRecu = \textcolor{keyword}{new} DatagramPacket(reception, reception.length);
+00132                 \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket}.receive(paquetRecu);
+00133 
+00134                 \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a1c5c3782ce80717dab95ed5335929333}{trame} = \textcolor{keyword}{new} String(paquetRecu.getData(), paquetRecu.getOffset(), paquetRecu.getLength(
+      ));
+00135                 Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a5d58f88df1f20b4d61edbed9a82eccab}{TAG}, \textcolor{stringliteral}{"Réception de "} + paquetRecu.getAddress().getHostAddress() + \textcolor{stringliteral}{":"} + paquetRecu
+      .getPort() + \textcolor{stringliteral}{" -> "} + \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a1c5c3782ce80717dab95ed5335929333}{trame});
+00136 
+00137                 Message msg = Message.obtain();
+00138                 Bundle b = \textcolor{keyword}{new} Bundle();
+00139                 b.putString(\textcolor{stringliteral}{"adresseIP"}, paquetRecu.getAddress().getHostAddress());
+00140                 b.putInt(\textcolor{stringliteral}{"port"}, paquetRecu.getPort());
+00141                 b.putInt(\textcolor{stringliteral}{"etat"}, \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a3d73554b2774d3274ad385b0faa27d14}{Communication}.CODE\_RECEPTION);
+00142                 b.putString(\textcolor{stringliteral}{"trame"}, \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a1c5c3782ce80717dab95ed5335929333}{trame});
+00143                 msg.setData(b);
+00144                 \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_af123afba8dcddc259017fb5c3b431dab}{mutex}.lock();
+00145                 \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a05fa5f360f28819a9e106e0265a74643}{handler}.sendMessage(msg);
+00146                 \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_af123afba8dcddc259017fb5c3b431dab}{mutex}.unlock();
+00147             \}
+00148             \textcolor{keywordflow}{catch} (Exception e)
+00149             \{
+00150                 Log.d(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a5d58f88df1f20b4d61edbed9a82eccab}{TAG}, \textcolor{stringliteral}{"Erreur recevoir() [socket.isClosed = "} + \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}{socket}.isClosed() + \textcolor{stringliteral}{"]"});
+00151                 e.printStackTrace();
+00152             \}
+00153         \}
+00154     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_afe29bde1b4538990bd0a8c9b2d512efa}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_afe29bde1b4538990bd0a8c9b2d512efa}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!run@{run}}
+\index{run@{run}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Communication.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+méthode appelée automatiquement quand le socket reçois quelque chose 
+
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00247}{247} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+
+
+Références \hyperlink{_communication_8java_source_l00123}{com.\+lasalle.\+meeting.\+Communication.\+recevoir()}.
+
+
+
+Référencé par \hyperlink{_communication_8java_source_l00161}{com.\+lasalle.\+meeting.\+Communication.\+envoyer()}.
+
+
+\begin{DoxyCode}
+00248     \{
+00249         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a0344b79faa04dded3468fb8dda6baa81}{recevoir}();
+00250     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a872d98a1793108557acccd0e695892af}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a872d98a1793108557acccd0e695892af}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!set\+Handler@{set\+Handler}}
+\index{set\+Handler@{set\+Handler}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{set\+Handler()}{setHandler()}}
+{\footnotesize\ttfamily void com.\+lasalle.\+meeting.\+Communication.\+set\+Handler (\begin{DoxyParamCaption}\item[{Handler}]{handler }\end{DoxyParamCaption})}
+
+
+
+change le handler par celui mis en paramètre 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em handler} & Handler \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+void 
+\end{DoxyReturn}
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00112}{112} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+
+
+Références \hyperlink{_communication_8java_source_l00039}{com.\+lasalle.\+meeting.\+Communication.\+handler}.
+
+
+\begin{DoxyCode}
+00113     \{
+00114         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_af123afba8dcddc259017fb5c3b431dab}{mutex}.lock();
+00115         this.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a05fa5f360f28819a9e106e0265a74643}{handler} = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_a05fa5f360f28819a9e106e0265a74643}{handler};
+00116         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_communication_af123afba8dcddc259017fb5c3b431dab}{mutex}.unlock();
+00117     \}
+\end{DoxyCode}
+
+
+\subsubsection{Documentation des données membres}
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a46e5fbc8ec97ad651d544e09121a6468}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a46e5fbc8ec97ad651d544e09121a6468}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!adresse\+IP@{adresse\+IP}}
+\index{adresse\+IP@{adresse\+IP}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{adresse\+IP}{adresseIP}}
+{\footnotesize\ttfamily Inet\+Address com.\+lasalle.\+meeting.\+Communication.\+adresse\+IP = null\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+attribut récuperant l\textquotesingle{}adresse IP du portier 
+
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00038}{38} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a6a2d2e62f87bef261a1999eb5acf8abb}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a6a2d2e62f87bef261a1999eb5acf8abb}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!adresse\+Multicast@{adresse\+Multicast}}
+\index{adresse\+Multicast@{adresse\+Multicast}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{adresse\+Multicast}{adresseMulticast}}
+{\footnotesize\ttfamily final String com.\+lasalle.\+meeting.\+Communication.\+adresse\+Multicast = \char`\"{}239.\+0.\+0.\+42\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+adresse de multicast des portiers 
+
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00029}{29} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a9cd85019614f2434af944c955519dfd1}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a9cd85019614f2434af944c955519dfd1}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!C\+O\+D\+E\+\_\+\+R\+E\+C\+E\+P\+T\+I\+ON@{C\+O\+D\+E\+\_\+\+R\+E\+C\+E\+P\+T\+I\+ON}}
+\index{C\+O\+D\+E\+\_\+\+R\+E\+C\+E\+P\+T\+I\+ON@{C\+O\+D\+E\+\_\+\+R\+E\+C\+E\+P\+T\+I\+ON}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{C\+O\+D\+E\+\_\+\+R\+E\+C\+E\+P\+T\+I\+ON}{CODE\_RECEPTION}}
+{\footnotesize\ttfamily final int com.\+lasalle.\+meeting.\+Communication.\+C\+O\+D\+E\+\_\+\+R\+E\+C\+E\+P\+T\+I\+ON = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+code de reception correcte pour le portiers 
+
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00032}{32} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+
+
+Référencé par \hyperlink{_communication_8java_source_l00123}{com.\+lasalle.\+meeting.\+Communication.\+recevoir()}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_aeff38852b1f770d9a13cd5bf02090bb1}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_aeff38852b1f770d9a13cd5bf02090bb1}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+C\+H\+A\+MP@{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+C\+H\+A\+MP}}
+\index{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+C\+H\+A\+MP@{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+C\+H\+A\+MP}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+C\+H\+A\+MP}{DELIMITEUR\_CHAMP}}
+{\footnotesize\ttfamily final String com.\+lasalle.\+meeting.\+Communication.\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+C\+H\+A\+MP = \char`\"{};\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00045}{45} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a6560c39bb7ebc968e007e4dd98ec296c}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a6560c39bb7ebc968e007e4dd98ec296c}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+E\+N\+\_\+\+T\+E\+TE@{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+E\+N\+\_\+\+T\+E\+TE}}
+\index{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+E\+N\+\_\+\+T\+E\+TE@{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+E\+N\+\_\+\+T\+E\+TE}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+E\+N\+\_\+\+T\+E\+TE}{DELIMITEUR\_EN\_TETE}}
+{\footnotesize\ttfamily final String com.\+lasalle.\+meeting.\+Communication.\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+E\+N\+\_\+\+T\+E\+TE = \char`\"{}\$\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+Protocole 
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00044}{44} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a6f2e7cb2145496069cdf1b33d017be58}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a6f2e7cb2145496069cdf1b33d017be58}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+F\+IN@{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+F\+IN}}
+\index{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+F\+IN@{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+F\+IN}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+F\+IN}{DELIMITEUR\_FIN}}
+{\footnotesize\ttfamily final String com.\+lasalle.\+meeting.\+Communication.\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+\_\+\+F\+IN = \char`\"{}\textbackslash{}r\textbackslash{}n\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00046}{46} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a05fa5f360f28819a9e106e0265a74643}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a05fa5f360f28819a9e106e0265a74643}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!handler@{handler}}
+\index{handler@{handler}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{handler}{handler}}
+{\footnotesize\ttfamily Handler com.\+lasalle.\+meeting.\+Communication.\+handler\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+attribut permetant d\textquotesingle{}envoyer une requête par rapport a une autre activity 
+
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00039}{39} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+
+
+Référencé par \hyperlink{_communication_8java_source_l00056}{com.\+lasalle.\+meeting.\+Communication.\+Communication()}, et \hyperlink{_communication_8java_source_l00112}{com.\+lasalle.\+meeting.\+Communication.\+set\+Handler()}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_af123afba8dcddc259017fb5c3b431dab}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_af123afba8dcddc259017fb5c3b431dab}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!mutex@{mutex}}
+\index{mutex@{mutex}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{mutex}{mutex}}
+{\footnotesize\ttfamily final Reentrant\+Lock com.\+lasalle.\+meeting.\+Communication.\+mutex = new Reentrant\+Lock()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00033}{33} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a28886dc20c115ada2e1e3ee745805643}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a28886dc20c115ada2e1e3ee745805643}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+1@{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+1}}
+\index{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+1@{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+1}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+1}{NB\_DELIMITEURS\_GET\_1}}
+{\footnotesize\ttfamily final int com.\+lasalle.\+meeting.\+Communication.\+N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+1 = 6\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00047}{47} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a872d0590c8f9a71ed87484474a0c1070}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a872d0590c8f9a71ed87484474a0c1070}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+2@{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+2}}
+\index{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+2@{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+2}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+2}{NB\_DELIMITEURS\_GET\_2}}
+{\footnotesize\ttfamily final int com.\+lasalle.\+meeting.\+Communication.\+N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+2 = 3\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00048}{48} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_aa5881937f7ed66ade03b1eb16386ca9b}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_aa5881937f7ed66ade03b1eb16386ca9b}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+3@{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+3}}
+\index{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+3@{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+3}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+3}{NB\_DELIMITEURS\_GET\_3}}
+{\footnotesize\ttfamily final int com.\+lasalle.\+meeting.\+Communication.\+N\+B\+\_\+\+D\+E\+L\+I\+M\+I\+T\+E\+U\+R\+S\+\_\+\+G\+E\+T\+\_\+3 = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00049}{49} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_abf48fd6a29d87d67f4941494404f1ea7}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_abf48fd6a29d87d67f4941494404f1ea7}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!P\+O\+RT@{P\+O\+RT}}
+\index{P\+O\+RT@{P\+O\+RT}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{P\+O\+RT}{PORT}}
+{\footnotesize\ttfamily final int com.\+lasalle.\+meeting.\+Communication.\+P\+O\+RT = 5000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+port d\textquotesingle{}ecoute des portiers 
+
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00030}{30} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a2a538f36640aecebbb833bbaf1f03858}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!socket@{socket}}
+\index{socket@{socket}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{socket}{socket}}
+{\footnotesize\ttfamily Datagram\+Socket com.\+lasalle.\+meeting.\+Communication.\+socket\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+attribut récuperant les informations de la socket 
+
+Attributs 
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00037}{37} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a5d58f88df1f20b4d61edbed9a82eccab}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a5d58f88df1f20b4d61edbed9a82eccab}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!T\+AG@{T\+AG}}
+\index{T\+AG@{T\+AG}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{T\+AG}{TAG}}
+{\footnotesize\ttfamily final String com.\+lasalle.\+meeting.\+Communication.\+T\+AG = \char`\"{}Communication\char`\"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+T\+AG utilisé dans les log. 
+
+Constantes 
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00028}{28} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a7cbfa2bdd8c4978f96abd43740050fe0}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a7cbfa2bdd8c4978f96abd43740050fe0}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!T\+I\+M\+E\+O\+U\+T\+\_\+\+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+E\+P\+O\+N\+SE@{T\+I\+M\+E\+O\+U\+T\+\_\+\+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+E\+P\+O\+N\+SE}}
+\index{T\+I\+M\+E\+O\+U\+T\+\_\+\+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+E\+P\+O\+N\+SE@{T\+I\+M\+E\+O\+U\+T\+\_\+\+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+E\+P\+O\+N\+SE}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{T\+I\+M\+E\+O\+U\+T\+\_\+\+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+E\+P\+O\+N\+SE}{TIMEOUT\_RECEPTION\_REPONSE}}
+{\footnotesize\ttfamily final int com.\+lasalle.\+meeting.\+Communication.\+T\+I\+M\+E\+O\+U\+T\+\_\+\+R\+E\+C\+E\+P\+T\+I\+O\+N\+\_\+\+R\+E\+P\+O\+N\+SE = 30000\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+temps maximum d\textquotesingle{}une réponse d\textquotesingle{}un portier 
+
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00031}{31} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+
+
+Référencé par \hyperlink{_communication_8java_source_l00056}{com.\+lasalle.\+meeting.\+Communication.\+Communication()}.
+
+\mbox{\Hypertarget{classcom_1_1lasalle_1_1meeting_1_1_communication_a1c5c3782ce80717dab95ed5335929333}\label{classcom_1_1lasalle_1_1meeting_1_1_communication_a1c5c3782ce80717dab95ed5335929333}} 
+\index{com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}!trame@{trame}}
+\index{trame@{trame}!com\+::lasalle\+::meeting\+::\+Communication@{com\+::lasalle\+::meeting\+::\+Communication}}
+\paragraph{\texorpdfstring{trame}{trame}}
+{\footnotesize\ttfamily String com.\+lasalle.\+meeting.\+Communication.\+trame\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+attribut récuperant la trame 
+
+
+
+Définition à la ligne \hyperlink{_communication_8java_source_l00040}{40} du fichier \hyperlink{_communication_8java_source}{Communication.\+java}.
+
+
+
+Référencé par \hyperlink{_communication_8java_source_l00123}{com.\+lasalle.\+meeting.\+Communication.\+recevoir()}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_communication_8java}{Communication.\+java}\end{DoxyCompactItemize}

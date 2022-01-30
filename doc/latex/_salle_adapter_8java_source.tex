@@ -1,0 +1,60 @@
+\hypertarget{_salle_adapter_8java_source}{}\subsection{Salle\+Adapter.\+java}
+\label{_salle_adapter_8java_source}\index{Salle\+Adapter.\+java@{Salle\+Adapter.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }com.lasalle.meeting;
+00002 
+00003 \textcolor{keyword}{import} android.util.Log;
+00004 \textcolor{keyword}{import} android.view.LayoutInflater;
+00005 \textcolor{keyword}{import} android.view.View;
+00006 \textcolor{keyword}{import} android.view.ViewGroup;
+00007 
+00008 \textcolor{keyword}{import} androidx.annotation.NonNull;
+00009 \textcolor{keyword}{import} androidx.recyclerview.widget.RecyclerView;
+00010 
+00011 \textcolor{keyword}{import} java.util.Vector;
+00012 
+\Hypertarget{_salle_adapter_8java_source_l00023}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter}{00023} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter}{SalleAdapter} \textcolor{keyword}{extends} RecyclerView.Adapter<SalleViewHolder>
+00024 \{
+\Hypertarget{_salle_adapter_8java_source_l00028}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_a774947591a1beedaffd58989783206b1}{00028}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keyword}{final} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_a774947591a1beedaffd58989783206b1}{TAG} = \textcolor{stringliteral}{"SalleAdapter"};           
+00029 
+\Hypertarget{_salle_adapter_8java_source_l00032}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_a3988ff211fbf3052b553d77ba0711a5a}{00032}     \textcolor{keyword}{private} Vector<Salle> \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_a3988ff211fbf3052b553d77ba0711a5a}{mesSalles} = null;                     
+00033 
+\Hypertarget{_salle_adapter_8java_source_l00038}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_aac5caf27dc7448e1f37868066b3c9d00}{00038}     \textcolor{keyword}{public} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_aac5caf27dc7448e1f37868066b3c9d00}{SalleAdapter}(Vector<Salle> mesSalles)
+00039     \{
+00040         Log.d(TAG, \textcolor{stringliteral}{"SalleAdapter (Vector<Salle>)"});
+00041 
+00042         \textcolor{keywordflow}{if} (mesSalles != null) \{
+00043             this.mesSalles = \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_a3988ff211fbf3052b553d77ba0711a5a}{mesSalles};
+00044         \}
+00045     \}
+00046 
+00052     @NonNull
+00053     @Override
+\Hypertarget{_salle_adapter_8java_source_l00054}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_a35aef67b6f83b63fdc9898f6024b24ac}{00054}     \textcolor{keyword}{public} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder}{SalleViewHolder} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_a35aef67b6f83b63fdc9898f6024b24ac}{onCreateViewHolder}(@NonNull ViewGroup parent, \textcolor{keywordtype}{
+      int} viewType)
+00055     \{
+00056         Log.d(TAG, \textcolor{stringliteral}{"SalleViewHolder onCreateViewHolder()"});
+00057         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+00058         View view = inflater.inflate(R.layout.salle, parent, \textcolor{keyword}{false});
+00059         \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder}{SalleViewHolder}(view);
+00060     \}
+00061 
+00067     @Override
+\Hypertarget{_salle_adapter_8java_source_l00068}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_ac196b478a0ea01a05455bfe15111406f}{00068}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_ac196b478a0ea01a05455bfe15111406f}{onBindViewHolder}(@NonNull \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder}{SalleViewHolder} holder, \textcolor{keywordtype}{int} 
+      position)
+00069     \{
+00070         Log.d(TAG, \textcolor{stringliteral}{"onBindViewHolder()"});
+00071         \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} salle = mesSalles.get(position);
+00072         holder.afficher(salle);
+00073     \}
+00074 
+00079     @Override
+\Hypertarget{_salle_adapter_8java_source_l00080}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_a4ee9f3c4b020c3bfd88e072bb21bc5fc}{00080}     \textcolor{keyword}{public} \textcolor{keywordtype}{int} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adapter_a4ee9f3c4b020c3bfd88e072bb21bc5fc}{getItemCount}() \{
+00081         Log.d(TAG, \textcolor{stringliteral}{"getItemCount()"});
+00082         \textcolor{keywordflow}{if} (mesSalles != null)
+00083             \textcolor{keywordflow}{return} mesSalles.size();
+00084         \textcolor{keywordflow}{return} 0;
+00085     \}
+00086 \}
+\end{DoxyCode}

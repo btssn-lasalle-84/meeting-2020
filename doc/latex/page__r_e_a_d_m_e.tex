@@ -1,0 +1,45 @@
+\hypertarget{page__r_e_a_d_m_e_projet}{}\subsection{Projet}\label{page__r_e_a_d_m_e_projet}
+\hypertarget{page__r_e_a_d_m_e_presentation}{}\subsubsection{Présentation}\label{page__r_e_a_d_m_e_presentation}
+Placé à l\textquotesingle{}extérieur d\textquotesingle{}une pièce (salle de réunion ou de travail, ...), le système {\bfseries Meeting} permettra d\textquotesingle{}accéder en temps réel aux informations de l\textquotesingle{}espace concerné \+: il affichera la disponibilité et l\textquotesingle{}état de confort et permettra de réaliser sa réservation.
+
+L\textquotesingle{}objectif est de proposer une solution simple, alliant flexibilité et ergonomie. Le système affiche de la disponibilité d\textquotesingle{}accès et le niveau de confort d\textquotesingle{}une salle de travail ou de réunion.
+
+Le portier connecté est composé \+:
+
+
+\begin{DoxyItemize}
+\item d\textquotesingle{}un micro-\/contrôleur (E\+S\+P32, Z-\/duino,...)
+\item d\textquotesingle{}un écran tactile
+\item d\textquotesingle{}indicateurs lumineux (Leds)
+\item d\textquotesingle{}une liaison Bluetooth vers une sonde permettant d\textquotesingle{}évaluer un “indice de confort”
+\end{DoxyItemize}
+
+La sonde est composée \+:
+
+
+\begin{DoxyItemize}
+\item d\textquotesingle{}un capteur de température
+\item d\textquotesingle{}un capteur d\textquotesingle{}hygrométrie
+\item d\textquotesingle{}un capteur de qualité d\textquotesingle{}air
+\end{DoxyItemize}
+
+A partir d\textquotesingle{}une application mobile sous Android et communiquant en U\+PD via le Wi\+Fi, l\textquotesingle{}utilisateur pourra \+:
+
+
+\begin{DoxyItemize}
+\item Lorsqu\textquotesingle{}une salle a été sélectionnée, visualiser les informations sur la salle (son nom et des informations complémentaires qu\textquotesingle{}il pourra associer à celle-\/ci comme sa localisation, sa surface ...), sa disponibilité et les mesures en provenance du module sonde ainsi que son indice de confort.
+\item configurer les informations d\textquotesingle{}une salle.
+\item la possibilité de prendre une salle en indiquant une durée estimée d\textquotesingle{}occupation de celle-\/ci. Dans ce cas, le portier lui enverra un code qu\textquotesingle{}il utilisera pour augmenter la durée d\textquotesingle{}occupation ou de libérer la salle.
+\end{DoxyItemize}\hypertarget{page__r_e_a_d_m_e_informations}{}\subsubsection{Informations}\label{page__r_e_a_d_m_e_informations}
+\begin{DoxyAuthor}{Auteur}
+Vincent Devine \href{mailto:vincentdevine84@gmail.com}{\tt vincentdevine84@gmail.\+com} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+0.\+2 
+\end{DoxyVersion}
+\begin{DoxySeeAlso}{Voir également}
+\href{https://svn.riouxsvn.com/meeting/}{\tt https\+://svn.\+riouxsvn.\+com/meeting/} 
+\end{DoxySeeAlso}

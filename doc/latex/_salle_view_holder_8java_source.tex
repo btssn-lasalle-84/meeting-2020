@@ -1,0 +1,78 @@
+\hypertarget{_salle_view_holder_8java_source}{}\subsection{Salle\+View\+Holder.\+java}
+\label{_salle_view_holder_8java_source}\index{Salle\+View\+Holder.\+java@{Salle\+View\+Holder.\+java}}
+
+\begin{DoxyCode}
+00001 \textcolor{keyword}{package }com.lasalle.meeting;
+00002 
+00003 \textcolor{keyword}{import} android.app.AlertDialog;
+00004 \textcolor{keyword}{import} android.content.Context;
+00005 \textcolor{keyword}{import} android.content.Intent;
+00006 \textcolor{keyword}{import} android.util.Log;
+00007 \textcolor{keyword}{import} android.view.View;
+00008 \textcolor{keyword}{import} android.widget.ImageView;
+00009 \textcolor{keyword}{import} android.widget.TextView;
+00010 
+00011 \textcolor{keyword}{import} java.io.Serializable;
+00012 
+00013 \textcolor{keyword}{import} androidx.recyclerview.widget.RecyclerView;
+00014 
+\Hypertarget{_salle_view_holder_8java_source_l00025}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder}{00025} \textcolor{keyword}{public} \textcolor{keyword}{class }\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder}{SalleViewHolder} \textcolor{keyword}{extends} RecyclerView.ViewHolder
+00026 \{
+\Hypertarget{_salle_view_holder_8java_source_l00030}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_acde5b16df12d2d83074c53bbfe7220b9}{00030}     \textcolor{keyword}{private} \textcolor{keyword}{static} \textcolor{keyword}{final} String \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_acde5b16df12d2d83074c53bbfe7220b9}{TAG} = \textcolor{stringliteral}{"SalleViewHolder"};        
+00031 
+\Hypertarget{_salle_view_holder_8java_source_l00034}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_a54d26a89113e63e36c17c4ed9253f058}{00034}     \textcolor{keyword}{private} TextView \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_a54d26a89113e63e36c17c4ed9253f058}{nomSalle};                                  
+\Hypertarget{_salle_view_holder_8java_source_l00035}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_adb1ed56224bf4c72f3b6ceadd1e20da5}{00035}     \textcolor{keyword}{private} TextView \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_adb1ed56224bf4c72f3b6ceadd1e20da5}{confortSalle};                              
+\Hypertarget{_salle_view_holder_8java_source_l00036}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_a022ce4875ad260fe538779ae45fae90a}{00036}     \textcolor{keyword}{private} TextView \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_a022ce4875ad260fe538779ae45fae90a}{disponibiliteSalle};                        
+\Hypertarget{_salle_view_holder_8java_source_l00037}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_aa062c074e992faadf2386744ea33034f}{00037}     \textcolor{keyword}{private} ImageView \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_aa062c074e992faadf2386744ea33034f}{imageDisponibiliteSalle};                  
+00038 
+\Hypertarget{_salle_view_holder_8java_source_l00041}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_a7072e3d124129f260af7a24c7ad4277d}{00041}     \textcolor{keyword}{private} Context \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_a7072e3d124129f260af7a24c7ad4277d}{context};                                    
+\Hypertarget{_salle_view_holder_8java_source_l00042}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_afe85265c9d35c5035e96ace9c8032606}{00042}     \textcolor{keyword}{private} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_afe85265c9d35c5035e96ace9c8032606}{salle};                                        
+00043 
+00044 
+\Hypertarget{_salle_view_holder_8java_source_l00049}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_ab123df6edb081221dc36daff6f8c1763}{00049}     \textcolor{keyword}{public} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_ab123df6edb081221dc36daff6f8c1763}{SalleViewHolder}(\textcolor{keyword}{final} View itemView)
+00050     \{
+00051         super(itemView);
+00052 
+00053         Log.d(TAG, \textcolor{stringliteral}{"SalleViewHolder(final View itemView)"});
+00054 
+00055         nomSalle= ((TextView)itemView.findViewById(R.id.nomSalle));
+00056         confortSalle = ((TextView)itemView.findViewById(R.id.confortSalle));
+00057         disponibiliteSalle = ((TextView)itemView.findViewById(R.id.disponibiliteSalle));
+00058         imageDisponibiliteSalle = ((ImageView)itemView.findViewById(R.id.imageDisponibiliteSalle));
+00059         context = itemView.getContext();
+00060 
+00061         itemView.setOnClickListener(\textcolor{keyword}{new} View.OnClickListener()
+00062         \{
+00063             @Override
+00064             \textcolor{keyword}{public} \textcolor{keywordtype}{void} onClick(View view)
+00065             \{
+00066                 Intent intent = \textcolor{keyword}{new} Intent(context, \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_activity}{SalleActivity}.class);
+00067                 intent.putExtra(\textcolor{stringliteral}{"Salle"}, (Serializable) salle);
+00068                 context.startActivity(intent);
+00069             \}
+00070         \});
+00071     \}
+00072 
+\Hypertarget{_salle_view_holder_8java_source_l00077}\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_ac9f5e4bd25c8abc50ad524e0c2132304}{00077}     \textcolor{keyword}{public} \textcolor{keywordtype}{void} \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_ac9f5e4bd25c8abc50ad524e0c2132304}{afficher}(\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle}{Salle} salle)
+00078     \{
+00079         Log.d(TAG, \textcolor{stringliteral}{"afficher ()"});
+00080 
+00081         this.salle= \hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_view_holder_afe85265c9d35c5035e96ace9c8032606}{salle};
+00082         nomSalle.setText(salle.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_a49d977f69b2783e8ad57eccffc29e97b}{getNom}());
+00083         nomSalle.setTextSize(15);
+00084         confortSalle.setText(salle.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_abf1f96423a1df46ba4d6ac4a1b6d0c34}{getConfortIHM}());
+00085         confortSalle.setTextSize(15);
+00086         disponibiliteSalle.setText(\textcolor{stringliteral}{"La salle est "}+ salle.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_ab86dfb73018e96230ceed49e207a8971}{getLibreIHM}());
+00087         disponibiliteSalle.setTextSize(15);
+00088 
+00089         \textcolor{keywordflow}{if}(salle.\hyperlink{classcom_1_1lasalle_1_1meeting_1_1_salle_adc0c4936355bc0ae22991f69c12a5e42}{getLibre}())
+00090         \{
+00091             imageDisponibiliteSalle.setImageResource(R.drawable.rond\_vert);
+00092         \}
+00093         \textcolor{keywordflow}{else}
+00094         \{
+00095             imageDisponibiliteSalle.setImageResource(R.drawable.rond\_rouge);
+00096         \}
+00097     \}
+00098 \}
+\end{DoxyCode}
