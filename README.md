@@ -42,9 +42,9 @@ A partir d'une application mobile sous Android et communiquant en UPD via le WiF
 
 ## Productions
 
-- [](dossier-meeting-ir-2020.pdf)
-- [](refman-meeting.pdf)
-- [](presentation-devine-2020.pptx)
+- [dossier-meeting-ir-2020.pdf](dossier-meeting-ir-2020.pdf)
+- [refman-meeting.pdf](refman-meeting.pdf)
+- [presentation-devine-2020.pptx](presentation-devine-2020.pptx)
 
 ## Vidéo
 
